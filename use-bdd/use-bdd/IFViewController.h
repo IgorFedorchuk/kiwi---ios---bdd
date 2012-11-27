@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IFViewController : UIViewController
+@interface IFViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

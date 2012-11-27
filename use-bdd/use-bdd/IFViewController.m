@@ -10,6 +10,8 @@
 
 @interface IFViewController ()
 
+@property (strong) UITableView *tableView;
+
 @end
 
 @implementation IFViewController

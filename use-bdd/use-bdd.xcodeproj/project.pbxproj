@@ -26,6 +26,9 @@
 		788B8E07166389A20060CDA8 /* use_bddTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 788B8E06166389A20060CDA8 /* use_bddTests.m */; };
 		78BC265B166500C700147AF1 /* MathSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC265A166500C700147AF1 /* MathSpec.m */; };
 		78BC265E1665017900147AF1 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BC265D1665017900147AF1 /* libKiwi.a */; };
+		78BC2684166516E400147AF1 /* IFViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC2683166516E400147AF1 /* IFViewControllerSpec.m */; };
+		78BC268D1665201500147AF1 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC268C1665201500147AF1 /* NSObject+Properties.m */; };
+		78BC268E1665201500147AF1 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC268C1665201500147AF1 /* NSObject+Properties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		788B8E06166389A20060CDA8 /* use_bddTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = use_bddTests.m; sourceTree = "<group>"; };
 		78BC265A166500C700147AF1 /* MathSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathSpec.m; sourceTree = "<group>"; };
 		78BC265D1665017900147AF1 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "Frameworks/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
+		78BC2683166516E400147AF1 /* IFViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFViewControllerSpec.m; sourceTree = "<group>"; };
+		78BC268B1665201500147AF1 /* NSObject+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Properties.h"; sourceTree = "<group>"; };
+		78BC268C1665201500147AF1 /* NSObject+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Properties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,7 @@
 		788B8DD8166389A20060CDA8 /* use-bdd */ = {
 			isa = PBXGroup;
 			children = (
+				78BC268916651FF900147AF1 /* Utils */,
 				788B8DE1166389A20060CDA8 /* IFAppDelegate.h */,
 				788B8DE2166389A20060CDA8 /* IFAppDelegate.m */,
 				788B8DEA166389A20060CDA8 /* IFViewController.h */,
@@ -157,6 +164,7 @@
 				788B8E06166389A20060CDA8 /* use_bddTests.m */,
 				788B8E00166389A20060CDA8 /* Supporting Files */,
 				78BC265A166500C700147AF1 /* MathSpec.m */,
+				78BC2683166516E400147AF1 /* IFViewControllerSpec.m */,
 			);
 			path = "use-bddTests";
 			sourceTree = "<group>";
@@ -168,6 +176,23 @@
 				788B8E02166389A20060CDA8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		78BC268916651FF900147AF1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				78BC268A1665200500147AF1 /* Categories */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		78BC268A1665200500147AF1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				78BC268B1665201500147AF1 /* NSObject+Properties.h */,
+				78BC268C1665201500147AF1 /* NSObject+Properties.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +310,7 @@
 				788B8DDF166389A20060CDA8 /* main.m in Sources */,
 				788B8DE3166389A20060CDA8 /* IFAppDelegate.m in Sources */,
 				788B8DEC166389A20060CDA8 /* IFViewController.m in Sources */,
+				78BC268D1665201500147AF1 /* NSObject+Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +320,8 @@
 			files = (
 				788B8E07166389A20060CDA8 /* use_bddTests.m in Sources */,
 				78BC265B166500C700147AF1 /* MathSpec.m in Sources */,
+				78BC2684166516E400147AF1 /* IFViewControllerSpec.m in Sources */,
+				78BC268E1665201500147AF1 /* NSObject+Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

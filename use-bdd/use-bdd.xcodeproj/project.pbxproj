@@ -63,7 +63,7 @@
 		788B8E05166389A20060CDA8 /* use_bddTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = use_bddTests.h; sourceTree = "<group>"; };
 		788B8E06166389A20060CDA8 /* use_bddTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = use_bddTests.m; sourceTree = "<group>"; };
 		78BC265A166500C700147AF1 /* MathSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathSpec.m; sourceTree = "<group>"; };
-		78BC265D1665017900147AF1 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libKiwi.a; path = "Frameworks/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
+		78BC265D1665017900147AF1 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "Frameworks/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +401,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "use-bdd/use-bdd-Prefix.pch";
 				INFOPLIST_FILE = "use-bdd/use-bdd-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -412,6 +413,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "use-bdd/use-bdd-Prefix.pch";
 				INFOPLIST_FILE = "use-bdd/use-bdd-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -428,6 +430,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "use-bdd/use-bdd-Prefix.pch";
 				INFOPLIST_FILE = "use-bddTests/use-bddTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -447,6 +450,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "use-bdd/use-bdd-Prefix.pch";
 				INFOPLIST_FILE = "use-bddTests/use-bddTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";

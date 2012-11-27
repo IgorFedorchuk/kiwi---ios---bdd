@@ -1,0 +1,3 @@
+[submodule "use-bdd/Frameworks/Kiwi"]
+	path = use-bdd/Frameworks/Kiwi
+	url = https://github.com/allending/Kiwi.git

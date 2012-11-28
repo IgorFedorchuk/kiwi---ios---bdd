@@ -8,12 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class IFViewController;
 
 @interface IFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) IFViewController *viewController;
-
 @end

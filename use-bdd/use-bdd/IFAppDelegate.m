@@ -12,8 +12,8 @@
 
 @interface IFAppDelegate()
 
-@property (nonatomic, retain) UINavigationController *navigationController;
-@property (strong, nonatomic) IFViewController *viewController;
+@property (nonatomic, strong) UINavigationController *navigationController;
+@property (nonatomic, strong) IFViewController *viewController;
 
 @end
 

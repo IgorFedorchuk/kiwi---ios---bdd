@@ -10,7 +10,8 @@
 
 @interface IFViewController ()
 
-@property (strong) UITableView *tableView;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) IBOutlet UIView *spinerView;
 
 @end
 
@@ -19,7 +20,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.navigationItem.title = @"Iphone tag";
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
 }
 
 - (void)didReceiveMemoryWarning

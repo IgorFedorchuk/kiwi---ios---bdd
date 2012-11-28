@@ -11,4 +11,5 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #define iPad    UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
 #endif

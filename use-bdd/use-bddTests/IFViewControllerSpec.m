@@ -17,8 +17,12 @@ describe(@"IFViewController", ^{
         afterAll(^{ // Occurs once
         });
         
-        beforeEach(^{ // Occurs before each enclosed "it"
-            viewController = [[IFViewController alloc] init];
+        beforeEach(^{
+            
+            viewController = [[IFViewController alloc] initWithNibName:@"IFViewController_iPhone" bundle:nil];
+
+            UIView *aView = viewController.view;
+            aView = nil;
         });
         
         afterEach(^{ // Occurs after each enclosed "it"
@@ -30,23 +34,32 @@ describe(@"IFViewController", ^{
             [[viewController should] conformToProtocol:@protocol(UITableViewDelegate)];
         });
         
-        it(@"IFViewController should has tableView propertie", ^{
-            
-                NSArray* propertyList = [viewController propertyList];
-                NSString *name = nil;
-            
-                for (NSDictionary *propertyInfo in propertyList)
-                {
-                    NSString *propertyName = [propertyInfo objectForKey:@"propertyName"];
-                    if([propertyName isEqualToString:@"tableView"])
-                    {
-                        name = propertyName;
-                        break;
-                    }
-                }
-                NSLog(@"name: %@", name);
-                [name shouldNotBeNil];
-        }); 
+        it(@"IFViewController should has tableView", ^
+        {
+            UITableView *tableView = (UITableView *)[viewController valueForPropertyName:@"spinerView"];
+            [tableView shouldNotBeNil];                    
+        });
+        
+        it(@"IFViewController should has text on navBar", ^
+        {
+            NSString *text = viewController.navigationItem.title;
+            [text shouldNotBeNil];
+        });
+        
+        it(@"IFViewController should has SpinerView", ^
+        {
+            UIView *spinerView = (UIView *)[viewController valueForPropertyName:@"spinerView"];
+            [spinerView shouldNotBeNil];
+           
+        });
+        
+        it(@"ISpinerView will not be hidden after viewDidAppear", ^
+           {
+               [viewController viewDidAppear:YES];
+               UIView *spinerView = (UIView *)[viewController valueForPropertyName:@"spinerView"];
+               
+               [[theValue(spinerView.hidden) should] equal:theValue(NO)];
+           });
         
     });
 });

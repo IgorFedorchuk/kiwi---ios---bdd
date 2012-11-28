@@ -43,4 +43,34 @@ static const char *getPropertyType(objc_property_t property) {
     return propertyList;
 }
 
+-(BOOL)hasPropertyWithName:(NSString *)name object:(NSObject *)object
+{
+    if (!object || !name)
+    {
+        return NO;
+    }
+    
+    NSArray* propertyList = [object propertyList];
+    BOOL hasProperty = NO;
+    for (NSDictionary *propertyInfo in propertyList)
+    {
+        NSString *propertyName = [propertyInfo objectForKey:@"propertyName"];
+        if([propertyName isEqualToString:name])
+        {
+            hasProperty = YES;
+            break;
+        }
+    }
+    return hasProperty;
+}
+
+-(id)valueForPropertyName:(NSString *)name
+{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+    SEL propertyGetter = NSSelectorFromString(name);
+    return[self performSelector:propertyGetter];
+#pragma clang diagnostic pop
+}
+
 @end

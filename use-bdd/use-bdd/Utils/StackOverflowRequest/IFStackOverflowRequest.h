@@ -6,8 +6,21 @@
 //  Copyright (c) 2012 IgorFedorchuk. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@class AFJSONRequestOperation;
+@protocol StackOverflowRequestDelegate;
+
 
 @interface IFStackOverflowRequest : NSObject
+
+-(id)initWithDelegate:(id<StackOverflowRequestDelegate>)delegate;
+-(AFJSONRequestOperation *)fetchQestions;
+
+@end
+
+
+@protocol StackOverflowRequestDelegate <NSObject>
+
+- (void)fetchFailedWithError: (NSError *)error;
+- (void)receivedJSON: (NSDictionary *)json;
 
 @end

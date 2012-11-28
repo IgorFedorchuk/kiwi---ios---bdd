@@ -23,11 +23,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[IFViewController alloc] initWithNibName:@"IFViewController_iPhone" bundle:nil];
-    } else {
-        self.viewController = [[IFViewController alloc] initWithNibName:@"IFViewController_iPad" bundle:nil];
-    }
+    self.viewController = [[IFViewController alloc] initWithNibName:@"IFViewController_iPhone" bundle:nil];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
 
     self.window.rootViewController = self.navigationController;

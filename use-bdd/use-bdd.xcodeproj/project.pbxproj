@@ -35,6 +35,11 @@
 		783DA785166667230007EEB1 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA773166667230007EEB1 /* AFXMLRequestOperation.m */; };
 		783DA786166667230007EEB1 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA775166667230007EEB1 /* UIImageView+AFNetworking.m */; };
 		783DA787166667230007EEB1 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA775166667230007EEB1 /* UIImageView+AFNetworking.m */; };
+		783DA78F1666745D0007EEB1 /* IFQuestionBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA78E1666745D0007EEB1 /* IFQuestionBuilder.m */; };
+		783DA7901666745D0007EEB1 /* IFQuestionBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA78E1666745D0007EEB1 /* IFQuestionBuilder.m */; };
+		783DA795166675900007EEB1 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA794166675900007EEB1 /* NSObject+Properties.m */; };
+		783DA796166675900007EEB1 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA794166675900007EEB1 /* NSObject+Properties.m */; };
+		783DA798166675CB0007EEB1 /* IFQuestionBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA797166675CB0007EEB1 /* IFQuestionBuilderSpec.m */; };
 		788B8DD3166389A20060CDA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD2166389A20060CDA8 /* UIKit.framework */; };
 		788B8DD5166389A20060CDA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD4166389A20060CDA8 /* Foundation.framework */; };
 		788B8DD7166389A20060CDA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD6166389A20060CDA8 /* CoreGraphics.framework */; };
@@ -91,6 +96,11 @@
 		783DA773166667230007EEB1 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		783DA774166667230007EEB1 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		783DA775166667230007EEB1 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		783DA78D1666745D0007EEB1 /* IFQuestionBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQuestionBuilder.h; sourceTree = "<group>"; };
+		783DA78E1666745D0007EEB1 /* IFQuestionBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQuestionBuilder.m; sourceTree = "<group>"; };
+		783DA793166675900007EEB1 /* NSObject+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Properties.h"; sourceTree = "<group>"; };
+		783DA794166675900007EEB1 /* NSObject+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Properties.m"; sourceTree = "<group>"; };
+		783DA797166675CB0007EEB1 /* IFQuestionBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQuestionBuilderSpec.m; sourceTree = "<group>"; };
 		788B8DCE166389A20060CDA8 /* use-bdd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "use-bdd.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		788B8DD2166389A20060CDA8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		788B8DD4166389A20060CDA8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -189,6 +199,15 @@
 			path = StackOverflowRequest;
 			sourceTree = "<group>";
 		};
+		783DA788166672860007EEB1 /* IFQuestionBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				783DA78D1666745D0007EEB1 /* IFQuestionBuilder.h */,
+				783DA78E1666745D0007EEB1 /* IFQuestionBuilder.m */,
+			);
+			path = IFQuestionBuilder;
+			sourceTree = "<group>";
+		};
 		788B8DC3166389A20060CDA8 = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +275,7 @@
 				788B8E00166389A20060CDA8 /* Supporting Files */,
 				78BC265A166500C700147AF1 /* MathSpec.m */,
 				78BC2683166516E400147AF1 /* IFViewControllerSpec.m */,
+				783DA797166675CB0007EEB1 /* IFQuestionBuilderSpec.m */,
 			);
 			path = "use-bddTests";
 			sourceTree = "<group>";
@@ -272,6 +292,7 @@
 		78BC268916651FF900147AF1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				783DA788166672860007EEB1 /* IFQuestionBuilder */,
 				783DA74C166665BF0007EEB1 /* StackOverflowRequest */,
 				783DA71B166662580007EEB1 /* AFNetworking */,
 				78BC268A1665200500147AF1 /* Categories */,
@@ -282,8 +303,10 @@
 		78BC268A1665200500147AF1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				783DA793166675900007EEB1 /* NSObject+Properties.h */,
+				783DA794166675900007EEB1 /* NSObject+Properties.m */,
 			);
-			name = Categories;
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +434,8 @@
 				783DA782166667230007EEB1 /* AFURLConnectionOperation.m in Sources */,
 				783DA784166667230007EEB1 /* AFXMLRequestOperation.m in Sources */,
 				783DA786166667230007EEB1 /* UIImageView+AFNetworking.m in Sources */,
+				783DA78F1666745D0007EEB1 /* IFQuestionBuilder.m in Sources */,
+				783DA795166675900007EEB1 /* NSObject+Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +457,9 @@
 				783DA783166667230007EEB1 /* AFURLConnectionOperation.m in Sources */,
 				783DA785166667230007EEB1 /* AFXMLRequestOperation.m in Sources */,
 				783DA787166667230007EEB1 /* UIImageView+AFNetworking.m in Sources */,
+				783DA7901666745D0007EEB1 /* IFQuestionBuilder.m in Sources */,
+				783DA796166675900007EEB1 /* NSObject+Properties.m in Sources */,
+				783DA798166675CB0007EEB1 /* IFQuestionBuilderSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

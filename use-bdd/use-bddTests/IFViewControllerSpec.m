@@ -32,6 +32,7 @@ describe(@"IFViewController", ^{
             [viewController shouldNotBeNil];
             [[viewController should] conformToProtocol:@protocol(UITableViewDataSource)];
             [[viewController should] conformToProtocol:@protocol(UITableViewDelegate)];
+            [[viewController should] conformToProtocol:@protocol(QuestionBuilderDelegate)];
         });
         
         it(@"IFViewController should has tableView", ^

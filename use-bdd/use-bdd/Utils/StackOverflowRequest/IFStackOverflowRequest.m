@@ -8,29 +8,29 @@
 
 #import "IFStackOverflowRequest.h"
 #import "AFJSONRequestOperation.h"
-NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=iphone&pagesize=20";
 
 @interface IFStackOverflowRequest()
 
 @property(nonatomic, weak) id<StackOverflowRequestDelegate> delegate;
+@property(nonatomic, strong) NSURL *url;
 
 @end
 
 @implementation IFStackOverflowRequest
 
--(id)initWithDelegate:(id<StackOverflowRequestDelegate>)requestDelegate
+-(id)initWithDelegate:(id<StackOverflowRequestDelegate>)requestDelegate urlString:(NSString *)urlString
 {
     if (self = [super init])
     {
         self.delegate = requestDelegate;
+        self.url = [NSURL URLWithString:urlString]; 
     }
     return self;
 }
 
 -(AFJSONRequestOperation *)fetchQestions
 {
-    NSURL *url = [NSURL URLWithString:questionsUrlString];    
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
     {

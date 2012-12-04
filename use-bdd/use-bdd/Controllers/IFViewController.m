@@ -10,6 +10,9 @@
 #import "IFStackOverflowRequest.h"
 #import "AFJSONRequestOperation.h"
 
+NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=iphone&pagesize=20";
+
+
 @interface IFViewController ()
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
@@ -22,15 +25,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"Iphone tag";
-    IFStackOverflowRequest *request = [[IFStackOverflowRequest alloc] init];
-    [[request fetchQestions] start];
+    self.navigationItem.title = @"Iphone tag";  
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    IFQuestionBuilder *questionBuilder = [[IFQuestionBuilder alloc] initWithDelegate:self];
     
+    IFStackOverflowRequest *request = [[IFStackOverflowRequest alloc] initWithDelegate:questionBuilder urlString:questionsUrlString];
+    [[request fetchQestions] start];
 }
 
 - (void)didReceiveMemoryWarning

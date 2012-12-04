@@ -12,7 +12,7 @@
 
 @interface IFStackOverflowRequest : NSObject
 
--(id)initWithDelegate:(id<StackOverflowRequestDelegate>)delegate;
+-(id)initWithDelegate:(id<StackOverflowRequestDelegate>)delegate urlString:(NSString *)urlString;
 -(AFJSONRequestOperation *)fetchQestions;
 
 @end

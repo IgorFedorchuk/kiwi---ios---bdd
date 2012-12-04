@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 IgorFedorchuk. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "IFQuestionBuilder.h"
 
-@interface IFViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface IFViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, QuestionBuilderDelegate>
 
 @end

@@ -9,8 +9,8 @@
 
 @interface IFPerson : NSObject
 
-@property (readonly, strong) NSString *name;
-@property (readonly, strong) NSURL *avatarURL;
+@property (nonatomic, strong, readonly) NSString *name;
+@property (nonatomic, strong, readonly) NSURL *avatarURL;
 
 - (id)initWithName: (NSString *)aName avatarLocation: (NSString *)location;
 

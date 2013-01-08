@@ -8,6 +8,7 @@
 
 #import "IFQuestionBuilder.h"
 #import "IFQuestion.h"
+#import "IFPersonBuilder.h"
 
 @interface IFQuestionBuilder()
 
@@ -47,8 +48,8 @@
     question.date = [NSDate dateWithTimeIntervalSince1970: [[parsedQuestion objectForKey: @"creation_date"] doubleValue]];
     question.title = [parsedQuestion objectForKey: @"title"];
     question.score = [[parsedQuestion objectForKey: @"score"] integerValue];
-    //NSDictionary *ownerValues = [parsedQuestion objectForKey: @"owner"];
-    //question.asker = [UserBuilder personFromDictionary: ownerValues];
+    NSDictionary *ownerValues = [parsedQuestion objectForKey: @"owner"];
+    question.asker = [IFPersonBuilder personFromDictionary:ownerValues];
     return question;
 }
 @end

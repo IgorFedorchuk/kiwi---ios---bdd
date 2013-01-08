@@ -8,17 +8,21 @@
 
 #import "IFPerson.h"
 
+@interface IFPerson()
+
+@property (nonatomic, strong, readwrite) NSString *name;
+@property (nonatomic, strong, readwrite) NSURL *avatarURL;
+
+@end
 
 @implementation IFPerson
 
-@synthesize name;
-@synthesize avatarURL;
-
-- (id)initWithName:(NSString *)aName avatarLocation:(NSString *)location {
+- (id)initWithName:(NSString *)aName avatarLocation:(NSString *)location
+{
     if ((self = [super init]))
     {
-        name = [aName copy];
-        avatarURL = [[NSURL alloc] initWithString: location];
+        self.name = [aName copy];
+        self.avatarURL = [[NSURL alloc] initWithString: location];
     }
     return self;
 }

@@ -45,6 +45,7 @@
 		78412293168C68B800CC8FAE /* IFQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 78412290168C68B800CC8FAE /* IFQuestion.m */; };
 		787D8EAE169C49C40071C906 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FC7CE9169C31EB006BC5D1 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		787D8EB1169C65F00071C906 /* IFStackOverflowRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB0169C65F00071C906 /* IFStackOverflowRequestSpec.m */; };
+		787D8EB5169C73A40071C906 /* IFPersonBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB4169C73A40071C906 /* IFPersonBuilder.m */; };
 		788B8DD3166389A20060CDA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD2166389A20060CDA8 /* UIKit.framework */; };
 		788B8DD5166389A20060CDA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD4166389A20060CDA8 /* Foundation.framework */; };
 		788B8DD7166389A20060CDA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD6166389A20060CDA8 /* CoreGraphics.framework */; };
@@ -114,6 +115,8 @@
 		7841228F168C68B800CC8FAE /* IFQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQuestion.h; sourceTree = "<group>"; };
 		78412290168C68B800CC8FAE /* IFQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQuestion.m; sourceTree = "<group>"; };
 		787D8EB0169C65F00071C906 /* IFStackOverflowRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFStackOverflowRequestSpec.m; sourceTree = "<group>"; };
+		787D8EB4169C73A40071C906 /* IFPersonBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFPersonBuilder.m; sourceTree = "<group>"; };
+		787D8EB6169C74270071C906 /* IFPersonBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFPersonBuilder.h; sourceTree = "<group>"; };
 		788B8DCE166389A20060CDA8 /* use-bdd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "use-bdd.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		788B8DD2166389A20060CDA8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		788B8DD4166389A20060CDA8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -236,6 +239,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		787D8EB2169C736F0071C906 /* PersonBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				787D8EB6169C74270071C906 /* IFPersonBuilder.h */,
+				787D8EB4169C73A40071C906 /* IFPersonBuilder.m */,
+			);
+			path = PersonBuilder;
+			sourceTree = "<group>";
+		};
 		788B8DC3166389A20060CDA8 = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +334,7 @@
 		78BC268916651FF900147AF1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				787D8EB2169C736F0071C906 /* PersonBuilder */,
 				78FC7CE7169C31EB006BC5D1 /* JSONKit */,
 				783DA788166672860007EEB1 /* IFQuestionBuilder */,
 				783DA74C166665BF0007EEB1 /* StackOverflowRequest */,
@@ -480,6 +493,7 @@
 				78412292168C68B800CC8FAE /* IFPerson.m in Sources */,
 				78412293168C68B800CC8FAE /* IFQuestion.m in Sources */,
 				78FC7CEA169C31EB006BC5D1 /* JSONKit.m in Sources */,
+				787D8EB5169C73A40071C906 /* IFPersonBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

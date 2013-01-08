@@ -2,6 +2,7 @@
 #import "IFQuestionBuilder.h"
 #import "JSONKit.h"
 #import "IFQuestion.h"
+#import "IFPerson.h"
 
 //JSON example
 static NSString *questionJSON = @"{"
@@ -25,7 +26,7 @@ static NSString *questionJSON = @"{"
 @"\"owner\": {"
 @"\"user_id\": 23743,"
 @"\"user_type\": \"registered\","
-@"\"display_name\": \"Graham Lee\","
+@"\"display_name\": \"Igor Fedorchuk\","
 @"\"reputation\": 13459,"
 @"\"email_hash\": \"563290c0c1b776a315b36e863b388a0c\""
 @"},"
@@ -71,11 +72,9 @@ describe(@"IFQuestionBuilderSpec", ^
             [[question.title should] equal:@"Why does Keychain Services return the wrong keychain content?"];
             [[theValue(question.score) should] equal:theValue(2)];
 
-            /*
-            
-            Person *asker = question.asker;
-            STAssertEqualObjects(asker.name, @"Graham Lee", @"Looks like I should have asked this question");
-            STAssertEqualObjects([asker.avatarURL absoluteString], @"http://www.gravatar.com/avatar/563290c0c1b776a315b36e863b388a0c", @"The avatar URL should be based on the supplied email hash");*/
+            IFPerson *asker = question.asker;
+            [[asker.name should] equal:@"Igor Fedorchuk"];
+            [[[asker.avatarURL absoluteString] should] equal:@"http://www.gravatar.com/avatar/563290c0c1b776a315b36e863b388a0c"];
         });
         
         it(@"should process fake JSON", ^

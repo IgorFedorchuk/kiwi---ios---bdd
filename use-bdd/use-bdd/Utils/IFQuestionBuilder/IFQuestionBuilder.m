@@ -20,7 +20,7 @@
     NSArray *questions = [json objectForKey: @"questions"];
     if (json == nil || questions == nil)
     {
-        return nil;
+        return [NSArray array];
     }
     
     NSMutableArray *results = [NSMutableArray array];

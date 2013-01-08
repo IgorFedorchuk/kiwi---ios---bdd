@@ -78,6 +78,17 @@ describe(@"IFQuestionBuilderSpec", ^
             STAssertEqualObjects([asker.avatarURL absoluteString], @"http://www.gravatar.com/avatar/563290c0c1b776a315b36e863b388a0c", @"The avatar URL should be based on the supplied email hash");*/
         });
         
+        it(@"should process fake JSON", ^
+        {
+            NSDictionary *fakeJson = nil;
+            NSArray *questions = [builder receivedJSON:fakeJson];
+            [[questions should] haveCountOf:0];
+            
+            fakeJson = [NSDictionary dictionary];
+            questions = [builder receivedJSON:fakeJson];
+            [[questions should] haveCountOf:0];
+        });
+        
     });
 });
 

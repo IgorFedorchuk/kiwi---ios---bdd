@@ -9,8 +9,9 @@
 #import "IFViewController.h"
 #import "IFStackOverflowRequest.h"
 #import "AFJSONRequestOperation.h"
+#import "IFQuestionBuilder.h"
 
-NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=iphone&pagesize=20";
+NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=iphone&pagesize=2";
 
 
 @interface IFViewController ()
@@ -30,17 +31,25 @@ NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
-    IFQuestionBuilder *questionBuilder = [[IFQuestionBuilder alloc] initWithDelegate:self];
-    
-    IFStackOverflowRequest *request = [[IFStackOverflowRequest alloc] initWithDelegate:questionBuilder urlString:questionsUrlString];
+    [super viewDidAppear:animated];    
+    IFStackOverflowRequest *request = [[IFStackOverflowRequest alloc] initWithDelegate:self urlString:questionsUrlString];
     [[request fetchQestions] start];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - StackOverflowRequestDelegate
+- (void)fetchFailedWithError: (NSError *)error
+{
+    
+}
+
+- (void)receivedJSON: (NSDictionary *)json
+{
+    
 }
 
 @end

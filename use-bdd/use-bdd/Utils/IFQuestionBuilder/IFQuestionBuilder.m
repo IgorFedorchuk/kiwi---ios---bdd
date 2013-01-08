@@ -7,31 +7,48 @@
 //
 
 #import "IFQuestionBuilder.h"
+#import "IFQuestion.h"
 
 @interface IFQuestionBuilder()
-
-@property(nonatomic, weak) id<QuestionBuilderDelegate> delegate;
 
 @end
 
 @implementation IFQuestionBuilder
 
--(id)initWithDelegate:(id<QuestionBuilderDelegate>)requestDelegate
+- (NSArray *)receivedJSON:(NSDictionary *)json
 {
-    if (self = [super init])
+    NSArray *questions = [json objectForKey: @"questions"];
+    if (json == nil || questions == nil)
     {
-        self.delegate = requestDelegate;
+        return nil;
     }
-    return self;
+    
+    NSMutableArray *results = [NSMutableArray array];
+    for (NSDictionary *parsedQuestion in questions)
+    {
+        IFQuestion *thisQuestion = [self questionFromParsedQuestion:parsedQuestion];
+        if (thisQuestion)
+        {
+            [results addObject: thisQuestion];
+        }
+    }
+    return results;
 }
 
-#pragma mark - StackOverflowRequestDelegate
-- (void)fetchFailedWithError:(NSError *)error
+- (IFQuestion *)questionFromParsedQuestion:(NSDictionary *)parsedQuestion
 {
+    if (parsedQuestion == nil)
+    {
+        return nil;
+    }
+    
+    IFQuestion *question = [IFQuestion new];
+    question.questionID = [[parsedQuestion objectForKey: @"question_id"] integerValue];
+    question.date = [NSDate dateWithTimeIntervalSince1970: [[parsedQuestion objectForKey: @"creation_date"] doubleValue]];
+    question.title = [parsedQuestion objectForKey: @"title"];
+    question.score = [[parsedQuestion objectForKey: @"score"] integerValue];
+    //NSDictionary *ownerValues = [parsedQuestion objectForKey: @"owner"];
+    //question.asker = [UserBuilder personFromDictionary: ownerValues];
+    return question;
 }
-
-- (void)receivedJSON:(NSDictionary *)json
-{
-}
-
 @end

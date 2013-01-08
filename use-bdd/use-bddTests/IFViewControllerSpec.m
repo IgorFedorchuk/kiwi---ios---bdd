@@ -32,12 +32,12 @@ describe(@"IFViewController", ^{
             [viewController shouldNotBeNil];
             [[viewController should] conformToProtocol:@protocol(UITableViewDataSource)];
             [[viewController should] conformToProtocol:@protocol(UITableViewDelegate)];
-            [[viewController should] conformToProtocol:@protocol(QuestionBuilderDelegate)];
+            [[viewController should] conformToProtocol:@protocol(StackOverflowRequestDelegate)];
         });
         
         it(@"IFViewController should has tableView", ^
         {
-            UITableView *tableView = (UITableView *)[viewController valueForPropertyName:@"spinerView"];
+            UITableView *tableView = (UITableView *)[viewController valueForPropertyName:@"tableView"];
             [tableView shouldNotBeNil];                    
         });
         

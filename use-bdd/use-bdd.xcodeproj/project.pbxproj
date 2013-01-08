@@ -40,6 +40,11 @@
 		783DA795166675900007EEB1 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA794166675900007EEB1 /* NSObject+Properties.m */; };
 		783DA796166675900007EEB1 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA794166675900007EEB1 /* NSObject+Properties.m */; };
 		783DA798166675CB0007EEB1 /* IFQuestionBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA797166675CB0007EEB1 /* IFQuestionBuilderSpec.m */; };
+		78412291168C68B800CC8FAE /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7841228C168C68B800CC8FAE /* Answer.m */; };
+		78412292168C68B800CC8FAE /* IFPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 7841228E168C68B800CC8FAE /* IFPerson.m */; };
+		78412293168C68B800CC8FAE /* IFQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 78412290168C68B800CC8FAE /* IFQuestion.m */; };
+		787D8EAE169C49C40071C906 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FC7CE9169C31EB006BC5D1 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		787D8EB1169C65F00071C906 /* IFStackOverflowRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB0169C65F00071C906 /* IFStackOverflowRequestSpec.m */; };
 		788B8DD3166389A20060CDA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD2166389A20060CDA8 /* UIKit.framework */; };
 		788B8DD5166389A20060CDA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD4166389A20060CDA8 /* Foundation.framework */; };
 		788B8DD7166389A20060CDA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD6166389A20060CDA8 /* CoreGraphics.framework */; };
@@ -57,6 +62,7 @@
 		78BC265B166500C700147AF1 /* MathSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC265A166500C700147AF1 /* MathSpec.m */; };
 		78BC265E1665017900147AF1 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BC265D1665017900147AF1 /* libKiwi.a */; };
 		78BC2684166516E400147AF1 /* IFViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC2683166516E400147AF1 /* IFViewControllerSpec.m */; };
+		78FC7CEA169C31EB006BC5D1 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FC7CE9169C31EB006BC5D1 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +107,13 @@
 		783DA793166675900007EEB1 /* NSObject+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Properties.h"; sourceTree = "<group>"; };
 		783DA794166675900007EEB1 /* NSObject+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Properties.m"; sourceTree = "<group>"; };
 		783DA797166675CB0007EEB1 /* IFQuestionBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQuestionBuilderSpec.m; sourceTree = "<group>"; };
+		7841228B168C68B800CC8FAE /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
+		7841228C168C68B800CC8FAE /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answer.m; sourceTree = "<group>"; };
+		7841228D168C68B800CC8FAE /* IFPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFPerson.h; sourceTree = "<group>"; };
+		7841228E168C68B800CC8FAE /* IFPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFPerson.m; sourceTree = "<group>"; };
+		7841228F168C68B800CC8FAE /* IFQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQuestion.h; sourceTree = "<group>"; };
+		78412290168C68B800CC8FAE /* IFQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQuestion.m; sourceTree = "<group>"; };
+		787D8EB0169C65F00071C906 /* IFStackOverflowRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFStackOverflowRequestSpec.m; sourceTree = "<group>"; };
 		788B8DCE166389A20060CDA8 /* use-bdd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "use-bdd.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		788B8DD2166389A20060CDA8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		788B8DD4166389A20060CDA8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -123,6 +136,8 @@
 		78BC265A166500C700147AF1 /* MathSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathSpec.m; sourceTree = "<group>"; };
 		78BC265D1665017900147AF1 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "Frameworks/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
 		78BC2683166516E400147AF1 /* IFViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFViewControllerSpec.m; sourceTree = "<group>"; };
+		78FC7CE8169C31EB006BC5D1 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		78FC7CE9169C31EB006BC5D1 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +223,19 @@
 			path = IFQuestionBuilder;
 			sourceTree = "<group>";
 		};
+		78412289168C689400CC8FAE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7841228B168C68B800CC8FAE /* Answer.h */,
+				7841228C168C68B800CC8FAE /* Answer.m */,
+				7841228D168C68B800CC8FAE /* IFPerson.h */,
+				7841228E168C68B800CC8FAE /* IFPerson.m */,
+				7841228F168C68B800CC8FAE /* IFQuestion.h */,
+				78412290168C68B800CC8FAE /* IFQuestion.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		788B8DC3166389A20060CDA8 = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +272,7 @@
 		788B8DD8166389A20060CDA8 /* use-bdd */ = {
 			isa = PBXGroup;
 			children = (
+				78412289168C689400CC8FAE /* Models */,
 				783DA74B166665A30007EEB1 /* Controllers */,
 				78BC268916651FF900147AF1 /* Utils */,
 				788B8DE1166389A20060CDA8 /* IFAppDelegate.h */,
@@ -276,6 +305,7 @@
 				78BC265A166500C700147AF1 /* MathSpec.m */,
 				78BC2683166516E400147AF1 /* IFViewControllerSpec.m */,
 				783DA797166675CB0007EEB1 /* IFQuestionBuilderSpec.m */,
+				787D8EB0169C65F00071C906 /* IFStackOverflowRequestSpec.m */,
 			);
 			path = "use-bddTests";
 			sourceTree = "<group>";
@@ -292,6 +322,7 @@
 		78BC268916651FF900147AF1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				78FC7CE7169C31EB006BC5D1 /* JSONKit */,
 				783DA788166672860007EEB1 /* IFQuestionBuilder */,
 				783DA74C166665BF0007EEB1 /* StackOverflowRequest */,
 				783DA71B166662580007EEB1 /* AFNetworking */,
@@ -307,6 +338,15 @@
 				783DA794166675900007EEB1 /* NSObject+Properties.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		78FC7CE7169C31EB006BC5D1 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				78FC7CE8169C31EB006BC5D1 /* JSONKit.h */,
+				78FC7CE9169C31EB006BC5D1 /* JSONKit.m */,
+			);
+			path = JSONKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,6 +476,10 @@
 				783DA786166667230007EEB1 /* UIImageView+AFNetworking.m in Sources */,
 				783DA78F1666745D0007EEB1 /* IFQuestionBuilder.m in Sources */,
 				783DA795166675900007EEB1 /* NSObject+Properties.m in Sources */,
+				78412291168C68B800CC8FAE /* Answer.m in Sources */,
+				78412292168C68B800CC8FAE /* IFPerson.m in Sources */,
+				78412293168C68B800CC8FAE /* IFQuestion.m in Sources */,
+				78FC7CEA169C31EB006BC5D1 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +504,8 @@
 				783DA7901666745D0007EEB1 /* IFQuestionBuilder.m in Sources */,
 				783DA796166675900007EEB1 /* NSObject+Properties.m in Sources */,
 				783DA798166675CB0007EEB1 /* IFQuestionBuilderSpec.m in Sources */,
+				787D8EAE169C49C40071C906 /* JSONKit.m in Sources */,
+				787D8EB1169C65F00071C906 /* IFStackOverflowRequestSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

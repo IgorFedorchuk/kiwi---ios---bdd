@@ -5,9 +5,9 @@
 //  Created by Igor on 26.11.12.
 //  Copyright (c) 2012 IgorFedorchuk. All rights reserved.
 //
+#import "IFStackOverflowRequest.h"
 
-#import "IFQuestionBuilder.h"
 
-@interface IFViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, QuestionBuilderDelegate>
+@interface IFViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, StackOverflowRequestDelegate>
 
 @end

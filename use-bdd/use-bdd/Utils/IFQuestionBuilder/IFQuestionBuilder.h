@@ -6,19 +6,8 @@
 //  Copyright (c) 2012 IgorFedorchuk. All rights reserved.
 //
 
-#import "IFStackOverflowRequest.h"
-@protocol QuestionBuilderDelegate;
+@interface IFQuestionBuilder : NSObject
 
-@interface IFQuestionBuilder : NSObject <StackOverflowRequestDelegate>
-
--(id)initWithDelegate:(id<QuestionBuilderDelegate>)delegate;
-
-@end
-
-
-@protocol QuestionBuilderDelegate <NSObject>
-
-//- (void)fetchFailedWithError: (NSError *)error;
-//- (void)receivedJSON: (NSDictionary *)json;
+- (NSArray *)receivedJSON:(NSDictionary *)json;
 
 @end

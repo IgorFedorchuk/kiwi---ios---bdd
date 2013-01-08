@@ -54,13 +54,16 @@ describe(@"IFViewController", ^{
            
         });
         
-        it(@"ISpinerView will not be hidden after viewDidAppear", ^
-           {
-               [viewController viewDidAppear:YES];
-               UIView *spinerView = (UIView *)[viewController valueForPropertyName:@"spinerView"];
-               
-               [[theValue(spinerView.hidden) should] equal:theValue(NO)];
-           });
+        it(@"ISpinerView will be hidden after request is finished", ^
+        {
+            [viewController receivedJSON:[NSDictionary mock]];
+            UIView *spinerView = (UIView *)[viewController valueForPropertyName:@"spinerView"];
+            [[theValue(spinerView.hidden) should] equal:theValue(YES)];
+            
+            [viewController fetchFailedWithError:[NSError mock]];
+            spinerView = (UIView *)[viewController valueForPropertyName:@"spinerView"];
+            [[theValue(spinerView.hidden) should] equal:theValue(YES)];
+        });
         
     });
 });

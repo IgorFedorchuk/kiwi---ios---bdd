@@ -34,6 +34,7 @@ NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=
     [super viewDidAppear:animated];    
     IFStackOverflowRequest *request = [[IFStackOverflowRequest alloc] initWithDelegate:self urlString:questionsUrlString];
     [[request fetchQestions] start];
+    [self spinerAnimation:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,12 +45,18 @@ NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=
 #pragma mark - StackOverflowRequestDelegate
 - (void)fetchFailedWithError: (NSError *)error
 {
-    
+    [self spinerAnimation:NO];
 }
 
 - (void)receivedJSON: (NSDictionary *)json
 {
-    
+    [self spinerAnimation:NO];
+}
+
+#pragma mark - Util
+-(void)spinerAnimation:(BOOL)animation
+{
+    self.spinerView.hidden = !animation;
 }
 
 @end

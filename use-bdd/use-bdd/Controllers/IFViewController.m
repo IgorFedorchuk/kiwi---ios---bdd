@@ -10,6 +10,7 @@
 #import "IFStackOverflowRequest.h"
 #import "AFJSONRequestOperation.h"
 #import "IFQuestionBuilder.h"
+#import "IFQuestionTableDelegate.h"
 
 NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=iphone&pagesize=2";
 
@@ -18,6 +19,7 @@ NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) IBOutlet UIView *spinerView;
+@property (nonatomic, strong) IFQuestionTableDelegate *questionTableDelegate;
 
 @end
 
@@ -26,7 +28,10 @@ NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"Iphone tag";  
+    self.navigationItem.title = @"Iphone tag";
+    self.questionTableDelegate = [IFQuestionTableDelegate new];
+    self.tableView.dataSource = self.questionTableDelegate;
+    self.tableView.delegate = self.questionTableDelegate;
 }
 
 -(void)viewDidAppear:(BOOL)animated

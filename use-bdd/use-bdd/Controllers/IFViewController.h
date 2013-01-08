@@ -8,6 +8,6 @@
 #import "IFStackOverflowRequest.h"
 
 
-@interface IFViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, StackOverflowRequestDelegate>
+@interface IFViewController : UIViewController <StackOverflowRequestDelegate>
 
 @end

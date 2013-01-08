@@ -8,7 +8,8 @@ SPEC_BEGIN(IFViewControllerSpec)
 
 describe(@"IFViewController", ^{
     
-    context(@"a state the component is in", ^{
+    context(@"a state the component is in", ^
+    {   
         __block IFViewController *viewController = nil;
         
         beforeAll(^{ // Occurs once
@@ -21,24 +22,28 @@ describe(@"IFViewController", ^{
             
             viewController = [[IFViewController alloc] initWithNibName:@"IFViewController_iPhone" bundle:nil];
 
-            UIView *aView = viewController.view;
+            UIView *aView = viewController.view; // lazy load
             aView = nil;
         });
         
         afterEach(^{ // Occurs after each enclosed "it"
         });
         
-        it(@"should not be nil and conforms protocol UITableViewDataSource && UITableViewDelegate", ^{
+        it(@"should not be nil and conform StackOverflowRequestDelegate protocol", ^
+        {
             [viewController shouldNotBeNil];
-            [[viewController should] conformToProtocol:@protocol(UITableViewDataSource)];
-            [[viewController should] conformToProtocol:@protocol(UITableViewDelegate)];
             [[viewController should] conformToProtocol:@protocol(StackOverflowRequestDelegate)];
         });
         
         it(@"IFViewController should has tableView", ^
         {
             UITableView *tableView = (UITableView *)[viewController valueForPropertyName:@"tableView"];
-            [tableView shouldNotBeNil];                    
+            [tableView shouldNotBeNil];
+            id dataSource = tableView.dataSource;
+            [dataSource shouldNotBeNil];
+            
+            id delegate = tableView.delegate;
+            [delegate shouldNotBeNil];
         });
         
         it(@"IFViewController should has text on navBar", ^
@@ -51,10 +56,9 @@ describe(@"IFViewController", ^{
         {
             UIView *spinerView = (UIView *)[viewController valueForPropertyName:@"spinerView"];
             [spinerView shouldNotBeNil];
-           
         });
         
-        it(@"ISpinerView will be hidden after request is finished", ^
+        it(@"SpinerView will be hidden after request is finished", ^
         {
             [viewController receivedJSON:[NSDictionary mock]];
             UIView *spinerView = (UIView *)[viewController valueForPropertyName:@"spinerView"];

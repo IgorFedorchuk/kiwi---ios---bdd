@@ -43,6 +43,14 @@
 		78412291168C68B800CC8FAE /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7841228C168C68B800CC8FAE /* Answer.m */; };
 		78412292168C68B800CC8FAE /* IFPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 7841228E168C68B800CC8FAE /* IFPerson.m */; };
 		78412293168C68B800CC8FAE /* IFQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 78412290168C68B800CC8FAE /* IFQuestion.m */; };
+		785D6E33169D57090052EABB /* IFQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 785D6E31169D57090052EABB /* IFQuestionCell.m */; };
+		785D6E34169D57090052EABB /* IFQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 785D6E31169D57090052EABB /* IFQuestionCell.m */; };
+		785D6E35169D57090052EABB /* IFQuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 785D6E32169D57090052EABB /* IFQuestionCell.xib */; };
+		785D6E36169D57090052EABB /* IFQuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 785D6E32169D57090052EABB /* IFQuestionCell.xib */; };
+		785D6E4B169D7C750052EABB /* IFSpinerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 785D6E49169D7C750052EABB /* IFSpinerCell.m */; };
+		785D6E4C169D7C750052EABB /* IFSpinerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 785D6E49169D7C750052EABB /* IFSpinerCell.m */; };
+		785D6E4D169D7C750052EABB /* IFSpinerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 785D6E4A169D7C750052EABB /* IFSpinerCell.xib */; };
+		785D6E4E169D7C750052EABB /* IFSpinerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 785D6E4A169D7C750052EABB /* IFSpinerCell.xib */; };
 		787D8EAE169C49C40071C906 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FC7CE9169C31EB006BC5D1 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		787D8EB1169C65F00071C906 /* IFStackOverflowRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB0169C65F00071C906 /* IFStackOverflowRequestSpec.m */; };
 		787D8EB5169C73A40071C906 /* IFPersonBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB4169C73A40071C906 /* IFPersonBuilder.m */; };
@@ -117,6 +125,12 @@
 		7841228E168C68B800CC8FAE /* IFPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFPerson.m; sourceTree = "<group>"; };
 		7841228F168C68B800CC8FAE /* IFQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQuestion.h; sourceTree = "<group>"; };
 		78412290168C68B800CC8FAE /* IFQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQuestion.m; sourceTree = "<group>"; };
+		785D6E30169D57090052EABB /* IFQuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQuestionCell.h; sourceTree = "<group>"; };
+		785D6E31169D57090052EABB /* IFQuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQuestionCell.m; sourceTree = "<group>"; };
+		785D6E32169D57090052EABB /* IFQuestionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IFQuestionCell.xib; sourceTree = "<group>"; };
+		785D6E48169D7C750052EABB /* IFSpinerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFSpinerCell.h; sourceTree = "<group>"; };
+		785D6E49169D7C750052EABB /* IFSpinerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFSpinerCell.m; sourceTree = "<group>"; };
+		785D6E4A169D7C750052EABB /* IFSpinerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IFSpinerCell.xib; sourceTree = "<group>"; };
 		787D8EB0169C65F00071C906 /* IFStackOverflowRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFStackOverflowRequestSpec.m; sourceTree = "<group>"; };
 		787D8EB4169C73A40071C906 /* IFPersonBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFPersonBuilder.m; sourceTree = "<group>"; };
 		787D8EB6169C74270071C906 /* IFPersonBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFPersonBuilder.h; sourceTree = "<group>"; };
@@ -207,6 +221,8 @@
 		783DA74B166665A30007EEB1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				785D6E47169D7C250052EABB /* SpinerCell */,
+				785D6E2E169D56CC0052EABB /* QuestionCell */,
 				783DA759166666E00007EEB1 /* IFViewController.h */,
 				783DA75A166666E00007EEB1 /* IFViewController.m */,
 				783DA758166666E00007EEB1 /* IFViewController_iPhone.xib */,
@@ -245,6 +261,26 @@
 				78412290168C68B800CC8FAE /* IFQuestion.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		785D6E2E169D56CC0052EABB /* QuestionCell */ = {
+			isa = PBXGroup;
+			children = (
+				785D6E30169D57090052EABB /* IFQuestionCell.h */,
+				785D6E31169D57090052EABB /* IFQuestionCell.m */,
+				785D6E32169D57090052EABB /* IFQuestionCell.xib */,
+			);
+			path = QuestionCell;
+			sourceTree = "<group>";
+		};
+		785D6E47169D7C250052EABB /* SpinerCell */ = {
+			isa = PBXGroup;
+			children = (
+				785D6E48169D7C750052EABB /* IFSpinerCell.h */,
+				785D6E49169D7C750052EABB /* IFSpinerCell.m */,
+				785D6E4A169D7C750052EABB /* IFSpinerCell.xib */,
+			);
+			path = SpinerCell;
 			sourceTree = "<group>";
 		};
 		787D8EB2169C736F0071C906 /* PersonBuilder */ = {
@@ -448,6 +484,8 @@
 				788B8DE7166389A20060CDA8 /* Default@2x.png in Resources */,
 				788B8DE9166389A20060CDA8 /* Default-568h@2x.png in Resources */,
 				783DA75B166666E00007EEB1 /* IFViewController_iPhone.xib in Resources */,
+				785D6E35169D57090052EABB /* IFQuestionCell.xib in Resources */,
+				785D6E4D169D7C750052EABB /* IFSpinerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +495,8 @@
 			files = (
 				788B8E04166389A20060CDA8 /* InfoPlist.strings in Resources */,
 				783DA75C166666E00007EEB1 /* IFViewController_iPhone.xib in Resources */,
+				785D6E36169D57090052EABB /* IFQuestionCell.xib in Resources */,
+				785D6E4E169D7C750052EABB /* IFSpinerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +544,8 @@
 				78FC7CEA169C31EB006BC5D1 /* JSONKit.m in Sources */,
 				787D8EB5169C73A40071C906 /* IFPersonBuilder.m in Sources */,
 				787D8EB9169C85B50071C906 /* IFQuestionTableDelegate.m in Sources */,
+				785D6E33169D57090052EABB /* IFQuestionCell.m in Sources */,
+				785D6E4B169D7C750052EABB /* IFSpinerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +574,8 @@
 				787D8EB1169C65F00071C906 /* IFStackOverflowRequestSpec.m in Sources */,
 				787D8EBA169C85B50071C906 /* IFQuestionTableDelegate.m in Sources */,
 				787D8EBE169C85D70071C906 /* QuestionTableDelegateSpec.m in Sources */,
+				785D6E34169D57090052EABB /* IFQuestionCell.m in Sources */,
+				785D6E4C169D7C750052EABB /* IFSpinerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

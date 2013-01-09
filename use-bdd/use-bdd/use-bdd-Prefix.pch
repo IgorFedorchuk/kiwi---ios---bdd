@@ -14,5 +14,9 @@
     #import <SystemConfiguration/SystemConfiguration.h>
     #import <MobileCoreServices/MobileCoreServices.h>
 
-    #define iPad    UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
+    #define UserDefaults        NSUserDefaults standardUserDefaults]
+    #define SharedApplication   [UIApplication sharedApplication]
+    #define Bundle              [NSBundle mainBundle]
+    #define MainScreen          [UIScreen mainScreen]
+
 #endif

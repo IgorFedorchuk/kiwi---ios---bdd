@@ -9,4 +9,6 @@
 
 @interface IFQuestionTableDelegate : NSObject <UITableViewDataSource, UITableViewDelegate>
 
+-(void)addQuestions:(NSArray *)newQuestions;
+
 @end

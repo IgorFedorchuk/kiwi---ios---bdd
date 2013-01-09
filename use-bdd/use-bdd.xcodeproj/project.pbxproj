@@ -40,7 +40,6 @@
 		783DA795166675900007EEB1 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA794166675900007EEB1 /* NSObject+Properties.m */; };
 		783DA796166675900007EEB1 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA794166675900007EEB1 /* NSObject+Properties.m */; };
 		783DA798166675CB0007EEB1 /* IFQuestionBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA797166675CB0007EEB1 /* IFQuestionBuilderSpec.m */; };
-		78412291168C68B800CC8FAE /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7841228C168C68B800CC8FAE /* Answer.m */; };
 		78412292168C68B800CC8FAE /* IFPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 7841228E168C68B800CC8FAE /* IFPerson.m */; };
 		78412293168C68B800CC8FAE /* IFQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 78412290168C68B800CC8FAE /* IFQuestion.m */; };
 		785D6E33169D57090052EABB /* IFQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 785D6E31169D57090052EABB /* IFQuestionCell.m */; };
@@ -119,8 +118,6 @@
 		783DA793166675900007EEB1 /* NSObject+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Properties.h"; sourceTree = "<group>"; };
 		783DA794166675900007EEB1 /* NSObject+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Properties.m"; sourceTree = "<group>"; };
 		783DA797166675CB0007EEB1 /* IFQuestionBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQuestionBuilderSpec.m; sourceTree = "<group>"; };
-		7841228B168C68B800CC8FAE /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
-		7841228C168C68B800CC8FAE /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answer.m; sourceTree = "<group>"; };
 		7841228D168C68B800CC8FAE /* IFPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFPerson.h; sourceTree = "<group>"; };
 		7841228E168C68B800CC8FAE /* IFPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFPerson.m; sourceTree = "<group>"; };
 		7841228F168C68B800CC8FAE /* IFQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQuestion.h; sourceTree = "<group>"; };
@@ -253,8 +250,6 @@
 		78412289168C689400CC8FAE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7841228B168C68B800CC8FAE /* Answer.h */,
-				7841228C168C68B800CC8FAE /* Answer.m */,
 				7841228D168C68B800CC8FAE /* IFPerson.h */,
 				7841228E168C68B800CC8FAE /* IFPerson.m */,
 				7841228F168C68B800CC8FAE /* IFQuestion.h */,
@@ -538,7 +533,6 @@
 				783DA786166667230007EEB1 /* UIImageView+AFNetworking.m in Sources */,
 				783DA78F1666745D0007EEB1 /* IFQuestionBuilder.m in Sources */,
 				783DA795166675900007EEB1 /* NSObject+Properties.m in Sources */,
-				78412291168C68B800CC8FAE /* Answer.m in Sources */,
 				78412292168C68B800CC8FAE /* IFPerson.m in Sources */,
 				78412293168C68B800CC8FAE /* IFQuestion.m in Sources */,
 				78FC7CEA169C31EB006BC5D1 /* JSONKit.m in Sources */,

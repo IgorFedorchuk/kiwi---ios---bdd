@@ -22,14 +22,17 @@ describe(@"QuestionTableDelegateSpec", ^
         {
             tableDelegate = [IFQuestionTableDelegate new];
             IFQuestion *first = [IFQuestion new];
-            IFQuestion *second = [IFQuestion new];
             first.title = @"No";
             first.score = 1;
             first.asker = [[IFPerson alloc] initWithName:@"Igor" avatarLocation:@"Igor1"];
+            first.date = [NSDate dateWithTimeIntervalSince1970: 1273660706];
+
+            IFQuestion *second = [IFQuestion new];
             second.title = @"Yes";
             second.score = 2;
             second.asker = [[IFPerson alloc] initWithName:@"Bill" avatarLocation:@"Bill1"];
-            
+            second.date = [NSDate dateWithTimeIntervalSince1970: 1273680706];
+
             NSArray *quistions = [NSArray arrayWithObjects:first, second, nil];
             [tableDelegate addQuestions:quistions];
             
@@ -90,18 +93,18 @@ describe(@"QuestionTableDelegateSpec", ^
             UILabel *scoreLabel = (UILabel *)[cell1 valueForPropertyName:@"scoreLabel"];
             UILabel *askerNameLabel = (UILabel *)[cell1 valueForPropertyName:@"askerNameLabel"];
 
-            [[titleLabel.text should] equal:@"No"];
-            [[scoreLabel.text should] equal:@"1"];
-            [[askerNameLabel.text should] equal:@"Igor"];
+            [[titleLabel.text should] equal:@"Yes"];
+            [[scoreLabel.text should] equal:@"2"];
+            [[askerNameLabel.text should] equal:@"Bill"];
             
             IFQuestionCell *cell2 = (IFQuestionCell *)[tableDelegate tableView:tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
             titleLabel = (UILabel *)[cell2 valueForPropertyName:@"titleLabel"];
             scoreLabel = (UILabel *)[cell2 valueForPropertyName:@"scoreLabel"];
             askerNameLabel = (UILabel *)[cell2 valueForPropertyName:@"askerNameLabel"];
             
-            [[titleLabel.text should] equal:@"Yes"];
-            [[scoreLabel.text should] equal:@"2"];
-            [[askerNameLabel.text should] equal:@"Bill"];
+            [[titleLabel.text should] equal:@"No"];
+            [[scoreLabel.text should] equal:@"1"];
+            [[askerNameLabel.text should] equal:@"Igor"];
         });
         
         it(@"if row of indexPath greater than  number of objects in questions array should return empty cell", ^
@@ -133,9 +136,28 @@ describe(@"QuestionTableDelegateSpec", ^
             [[cellClassName should] equal:NSStringFromClass ([IFSpinerCell class])];
         });
         
+        it(@"Array of questions should be sorted", ^
+        {
+            IFQuestion *third = [IFQuestion new];
+            third.date = [NSDate dateWithTimeIntervalSince1970: 1273690706];            
+            NSArray *quistions = [NSArray arrayWithObject:third];
+            [tableDelegate addQuestions:quistions];
+            
+            NSMutableArray *newArray = (NSMutableArray *)[tableDelegate valueForPropertyName:@"questions"];
+            
+            IFQuestion *question1 = [newArray objectAtIndex:0];
+            [[theValue([question1.date timeIntervalSince1970]) should] equal:theValue(1273690706)];
+
+            IFQuestion *question2 = [newArray objectAtIndex:1];
+            [[theValue([question2.date timeIntervalSince1970]) should] equal:theValue(1273680706)];
+
+            IFQuestion *question3 = [newArray objectAtIndex:2];
+            [[theValue([question3.date timeIntervalSince1970]) should] equal:theValue(1273660706)];
+        });
+        
         it(@"", ^
         {
-            
+               
         });
     });
 });

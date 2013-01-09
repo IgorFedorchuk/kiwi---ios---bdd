@@ -9,6 +9,7 @@
 #import "IFQuestionTableDelegate.h"
 #import "IFQuestionCell.h"
 #import "IFSpinerCell.h"
+#import "IFQuestion.h"
 
 @interface IFQuestionTableDelegate()
 
@@ -33,6 +34,13 @@
 -(void)addQuestions:(NSArray *)newQuestions
 {
     [self.questions addObjectsFromArray:newQuestions];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date"
+                                                  ascending:NO];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    NSArray *sortedArray = [self.questions sortedArrayUsingDescriptors:sortDescriptors];
+    self.questions = [NSMutableArray array];
+    [self.questions addObjectsFromArray:sortedArray];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

@@ -11,30 +11,10 @@
 
 @interface IFQuestion()
 
-@property (nonatomic, strong) NSMutableSet *answerSet;
 
 @end
 
 @implementation IFQuestion
-
-- (id)init
-{
-    if (self = [super init])
-    {
-        self.answerSet = [[NSMutableSet alloc] init];
-    }
-    return self;
-}
-
-- (void)addAnswer:(Answer *)answer
-{
-    [self.answerSet addObject: answer];
-}
-
-- (NSArray *)answers
-{
-    return [[self.answerSet allObjects] sortedArrayUsingSelector: @selector(compare:)];
-}
 
 
 @end

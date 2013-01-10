@@ -1,8 +1,6 @@
 #import "Kiwi.h"
 #import "IFViewController.h"
-#import <objc/runtime.h>
 #import "NSObject+Properties.h"
-
 
 SPEC_BEGIN(IFViewControllerSpec)
 
@@ -26,7 +24,9 @@ describe(@"IFViewController", ^{
             aView = nil;
         });
         
-        afterEach(^{ // Occurs after each enclosed "it"
+        afterEach(^
+        {
+            viewController = nil;
         });
         
         it(@"should not be nil and conform StackOverflowRequestDelegate protocol", ^

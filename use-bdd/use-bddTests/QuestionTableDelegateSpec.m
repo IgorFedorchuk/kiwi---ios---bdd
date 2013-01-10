@@ -17,10 +17,18 @@ describe(@"QuestionTableDelegateSpec", ^
     {
         __block IFQuestionTableDelegate *tableDelegate = nil;
         __block UITableView *tableView = nil;
-        
+        __block IFViewController *viewController = nil;
+
         beforeEach(^
         {
-            tableDelegate = [IFQuestionTableDelegate new];
+            viewController = [[IFViewController alloc] initWithNibName:@"IFViewController_iPhone" bundle:nil];
+            
+            UIView *aView = viewController.view; // lazy load
+            aView = nil;
+            tableView = (UITableView *)[viewController valueForPropertyName:@"tableView"];
+            
+            tableDelegate = [[IFQuestionTableDelegate alloc] initWithDelegate:viewController];
+            
             IFQuestion *first = [IFQuestion new];
             first.title = @"No";
             first.score = 1;
@@ -36,11 +44,6 @@ describe(@"QuestionTableDelegateSpec", ^
             NSArray *quistions = [NSArray arrayWithObjects:first, second, nil];
             [tableDelegate addQuestions:quistions];
             
-            IFViewController *viewController = [[IFViewController alloc] initWithNibName:@"IFViewController_iPhone" bundle:nil];
-            
-            UIView *aView = viewController.view; // lazy load
-            aView = nil;
-            tableView = (UITableView *)[viewController valueForPropertyName:@"tableView"];
         });
 
         afterEach(^
@@ -155,6 +158,28 @@ describe(@"QuestionTableDelegateSpec", ^
             [[theValue([question3.date timeIntervalSince1970]) should] equal:theValue(1273660706)];
         });
         
+        it(@"when last cell will be displayed should call needMoreQuestions", ^
+        {
+            IFQuestion *first = [IFQuestion new];
+            IFQuestion *second = [IFQuestion new];
+            NSArray *quistions = [NSArray arrayWithObjects:first, second, nil];
+            [tableDelegate addQuestions:quistions];
+            [tableDelegate addQuestions:quistions];
+            [tableDelegate addQuestions:quistions];
+            [tableDelegate addQuestions:quistions];
+            
+            [[viewController should] receive:@selector(needMoreQuestions)];
+
+            NSIndexPath *path = [NSIndexPath indexPathForRow:9 inSection:0];
+            UITableViewCell *cell = [tableView cellForRowAtIndexPath:path];
+            [tableDelegate tableView:tableView willDisplayCell:cell forRowAtIndexPath:path];
+            
+            [[viewController shouldNot] receive:@selector(needMoreQuestions)];
+
+            path = [NSIndexPath indexPathForRow:8 inSection:0];
+            cell = [tableView cellForRowAtIndexPath:path];
+            [tableDelegate tableView:tableView willDisplayCell:cell forRowAtIndexPath:path];
+        });
         it(@"", ^
         {
                

@@ -10,7 +10,6 @@
 #import "IFStackOverflowRequest.h"
 #import "AFJSONRequestOperation.h"
 #import "IFQuestionBuilder.h"
-#import "IFQuestionTableDelegate.h"
 
 NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=iphone&pagesize=20";
 
@@ -29,7 +28,7 @@ NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=
 {
     [super viewDidLoad];
     self.navigationItem.title = @"Iphone tag";
-    self.questionTableDelegate = [IFQuestionTableDelegate new];
+    self.questionTableDelegate = [[IFQuestionTableDelegate alloc] initWithDelegate:self];
     self.tableView.dataSource = self.questionTableDelegate;
     self.tableView.delegate = self.questionTableDelegate;
 }
@@ -51,6 +50,7 @@ NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=
 - (void)fetchFailedWithError: (NSError *)error
 {
     [self spinerAnimation:NO];
+    [[[UIAlertView alloc] initWithTitle:@"Warning" message:@"Request is failed" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
 - (void)receivedJSON: (NSDictionary *)json
@@ -60,6 +60,12 @@ NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=
     NSArray *questions = [questionBuilder questionsFromJSON:json];
     [self.questionTableDelegate addQuestions:questions];
     [self.tableView reloadData];
+}
+
+#pragma mark - QuestionTableDelegate
+- (void)needMoreQuestions
+{
+    
 }
 
 #pragma mark - Util

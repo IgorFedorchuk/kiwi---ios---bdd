@@ -17,6 +17,8 @@
 @property(nonatomic, strong) IBOutlet IFQuestionCell *questionCell;
 @property(nonatomic, strong) IBOutlet IFSpinerCell *spinerCell;
 
+@property(nonatomic, weak) id<QuestionTableDelegate> delegate;
+
 @end
 
 
@@ -27,6 +29,15 @@
     if (self = [super init])
     {
         self.questions = [NSMutableArray array];
+    }
+    return self;
+}
+
+-(id)initWithDelegate:(id<QuestionTableDelegate>)tableDelegate
+{
+    if (self = [self init])
+    {
+        self.delegate = tableDelegate;
     }
     return self;
 }
@@ -68,7 +79,10 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if ([self isLastRow:indexPath.row andNotVisibleOnTable:tableView])
+    {
+        [self.delegate needMoreQuestions];
+    }
 }
 
 #pragma mark - Util

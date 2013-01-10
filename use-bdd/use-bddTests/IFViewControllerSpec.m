@@ -33,6 +33,7 @@ describe(@"IFViewController", ^{
         {
             [viewController shouldNotBeNil];
             [[viewController should] conformToProtocol:@protocol(StackOverflowRequestDelegate)];
+            [[viewController should] conformToProtocol:@protocol(QuestionTableDelegate)];
         });
         
         it(@"IFViewController should has tableView", ^
@@ -60,7 +61,7 @@ describe(@"IFViewController", ^{
         
         it(@"SpinerView will be hidden after request is finished", ^
         {
-            [viewController receivedJSON:[NSDictionary mock]];
+            [viewController receivedJSON:[NSDictionary dictionary]];
             UIView *spinerView = (UIView *)[viewController valueForPropertyName:@"spinerView"];
             [[theValue(spinerView.hidden) should] equal:theValue(YES)];
             

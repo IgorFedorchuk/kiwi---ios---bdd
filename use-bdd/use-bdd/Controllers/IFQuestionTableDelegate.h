@@ -6,9 +6,17 @@
 //  Copyright (c) 2013 IgorFedorchuk. All rights reserved.
 //
 
+@protocol QuestionTableDelegate;
 
 @interface IFQuestionTableDelegate : NSObject <UITableViewDataSource, UITableViewDelegate>
 
+-(id)initWithDelegate:(id<QuestionTableDelegate>)delegate;
 -(void)addQuestions:(NSArray *)newQuestions;
+
+@end
+
+@protocol QuestionTableDelegate <NSObject>
+
+- (void)needMoreQuestions;
 
 @end

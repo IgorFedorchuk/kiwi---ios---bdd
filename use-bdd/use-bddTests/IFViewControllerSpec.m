@@ -38,7 +38,7 @@ describe(@"IFViewController", ^{
         
         it(@"IFViewController should has tableView", ^
         {
-            UITableView *tableView = (UITableView *)[viewController valueForPropertyName:@"tableView"];
+            UITableView *tableView = (UITableView *)[viewController objectForPropertyName:@"tableView"];
             [tableView shouldNotBeNil];
             id dataSource = tableView.dataSource;
             [dataSource shouldNotBeNil];
@@ -55,19 +55,37 @@ describe(@"IFViewController", ^{
         
         it(@"IFViewController should has SpinerView", ^
         {
-            UIView *spinerView = (UIView *)[viewController valueForPropertyName:@"spinerView"];
+            UIView *spinerView = (UIView *)[viewController objectForPropertyName:@"spinerView"];
             [spinerView shouldNotBeNil];
         });
         
         it(@"SpinerView will be hidden after request is finished", ^
         {
             [viewController receivedJSON:[NSDictionary dictionary]];
-            UIView *spinerView = (UIView *)[viewController valueForPropertyName:@"spinerView"];
+            UIView *spinerView = (UIView *)[viewController objectForPropertyName:@"spinerView"];
             [[theValue(spinerView.hidden) should] equal:theValue(YES)];
             
             [viewController fetchFailedWithError:[NSError mock]];
-            spinerView = (UIView *)[viewController valueForPropertyName:@"spinerView"];
+            spinerView = (UIView *)[viewController objectForPropertyName:@"spinerView"];
             [[theValue(spinerView.hidden) should] equal:theValue(YES)];
+        });
+        
+        it(@"if request fail then currentPageRequest should not been changed", ^
+        {
+            NSInteger currenrPageRequest = [viewController integerValueForPropertyName:@"currentPageRequest"];
+            [viewController fetchFailedWithError:[NSError mock]];
+            
+             NSInteger newPageRequest = [viewController integerValueForPropertyName:@"currentPageRequest"];
+            [[theValue(currenrPageRequest) should] equal:theValue(newPageRequest)];
+        });
+        
+        it(@"if request success then currentPageRequest should not been changed", ^
+        {
+            NSInteger currenrPageRequest = [viewController integerValueForPropertyName:@"currentPageRequest"];
+            [viewController receivedJSON:[NSDictionary dictionary]];
+               
+            NSInteger newPageRequest = [viewController integerValueForPropertyName:@"currentPageRequest"];
+            [[theValue(currenrPageRequest) should] equal:theValue(newPageRequest - 1)];
         });
         
     });

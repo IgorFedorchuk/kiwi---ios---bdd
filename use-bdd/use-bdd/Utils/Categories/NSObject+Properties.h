@@ -11,6 +11,7 @@
 @interface NSObject (Properties)
 
 - (NSArray*)propertyList;
-- (id)valueForPropertyName:(NSString *)name;
+- (id)objectForPropertyName:(NSString *)name;
+- (NSInteger)integerValueForPropertyName:(NSString *)name;
 
 @end

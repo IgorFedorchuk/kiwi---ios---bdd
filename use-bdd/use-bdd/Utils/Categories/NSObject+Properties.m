@@ -64,13 +64,27 @@ static const char *getPropertyType(objc_property_t property) {
     return hasProperty;
 }
 
--(id)valueForPropertyName:(NSString *)name
+-(id)objectForPropertyName:(NSString *)name
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     SEL propertyGetter = NSSelectorFromString(name);
     return[self performSelector:propertyGetter];
 #pragma clang diagnostic pop
+}
+
+-(NSInteger)integerValueForPropertyName:(NSString *)name
+{
+    SEL selector = NSSelectorFromString(name);
+    NSInteger returnValue = 0;
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:
+                                [[self class] instanceMethodSignatureForSelector:selector]];
+    [invocation setSelector:selector];
+    [invocation setTarget:self];
+    [invocation invoke];
+    
+    [invocation getReturnValue:&returnValue];
+    return returnValue;
 }
 
 @end

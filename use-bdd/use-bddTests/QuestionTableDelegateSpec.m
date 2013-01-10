@@ -25,7 +25,7 @@ describe(@"QuestionTableDelegateSpec", ^
             
             UIView *aView = viewController.view; // lazy load
             aView = nil;
-            tableView = (UITableView *)[viewController valueForPropertyName:@"tableView"];
+            tableView = (UITableView *)[viewController objectForPropertyName:@"tableView"];
             
             tableDelegate = [[IFQuestionTableDelegate alloc] initWithDelegate:viewController];
             
@@ -92,18 +92,18 @@ describe(@"QuestionTableDelegateSpec", ^
         {
             IFQuestionCell *cell1 = (IFQuestionCell *)[tableDelegate tableView:tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
             
-            UILabel *titleLabel = (UILabel *)[cell1 valueForPropertyName:@"titleLabel"];
-            UILabel *scoreLabel = (UILabel *)[cell1 valueForPropertyName:@"scoreLabel"];
-            UILabel *askerNameLabel = (UILabel *)[cell1 valueForPropertyName:@"askerNameLabel"];
+            UILabel *titleLabel = (UILabel *)[cell1 objectForPropertyName:@"titleLabel"];
+            UILabel *scoreLabel = (UILabel *)[cell1 objectForPropertyName:@"scoreLabel"];
+            UILabel *askerNameLabel = (UILabel *)[cell1 objectForPropertyName:@"askerNameLabel"];
 
             [[titleLabel.text should] equal:@"Yes"];
             [[scoreLabel.text should] equal:@"2"];
             [[askerNameLabel.text should] equal:@"Bill"];
             
             IFQuestionCell *cell2 = (IFQuestionCell *)[tableDelegate tableView:tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
-            titleLabel = (UILabel *)[cell2 valueForPropertyName:@"titleLabel"];
-            scoreLabel = (UILabel *)[cell2 valueForPropertyName:@"scoreLabel"];
-            askerNameLabel = (UILabel *)[cell2 valueForPropertyName:@"askerNameLabel"];
+            titleLabel = (UILabel *)[cell2 objectForPropertyName:@"titleLabel"];
+            scoreLabel = (UILabel *)[cell2 objectForPropertyName:@"scoreLabel"];
+            askerNameLabel = (UILabel *)[cell2 objectForPropertyName:@"askerNameLabel"];
             
             [[titleLabel.text should] equal:@"No"];
             [[scoreLabel.text should] equal:@"1"];
@@ -113,9 +113,9 @@ describe(@"QuestionTableDelegateSpec", ^
         it(@"if row of indexPath greater than  number of objects in questions array should return empty cell", ^
         {
             IFQuestionCell *cell1 = (IFQuestionCell *)[tableDelegate tableView:tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]];
-            UILabel *titleLabel = (UILabel *)[cell1 valueForPropertyName:@"titleLabel"];
-            UILabel *scoreLabel = (UILabel *)[cell1 valueForPropertyName:@"scoreLabel"];
-            UILabel *askerNameLabel = (UILabel *)[cell1 valueForPropertyName:@"askerNameLabel"];
+            UILabel *titleLabel = (UILabel *)[cell1 objectForPropertyName:@"titleLabel"];
+            UILabel *scoreLabel = (UILabel *)[cell1 objectForPropertyName:@"scoreLabel"];
+            UILabel *askerNameLabel = (UILabel *)[cell1 objectForPropertyName:@"askerNameLabel"];
             
             [[titleLabel.text should] equal:@"There was a problem."];
             [[scoreLabel.text should] equal:@""];
@@ -146,7 +146,7 @@ describe(@"QuestionTableDelegateSpec", ^
             NSArray *quistions = [NSArray arrayWithObject:third];
             [tableDelegate addQuestions:quistions];
             
-            NSMutableArray *newArray = (NSMutableArray *)[tableDelegate valueForPropertyName:@"questions"];
+            NSMutableArray *newArray = (NSMutableArray *)[tableDelegate objectForPropertyName:@"questions"];
             
             IFQuestion *question1 = [newArray objectAtIndex:0];
             [[theValue([question1.date timeIntervalSince1970]) should] equal:theValue(1273690706)];

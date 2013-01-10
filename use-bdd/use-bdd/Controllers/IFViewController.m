@@ -11,7 +11,7 @@
 #import "AFJSONRequestOperation.h"
 #import "IFQuestionBuilder.h"
 
-NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=iphone&pagesize=20";
+NSString *questionsUrlStringFormat = @"http://api.stackoverflow.com/1.1/search?tagged=iphone&page=%d&pagesize=20&sort=creation";
 
 
 @interface IFViewController ()
@@ -19,6 +19,8 @@ NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) IBOutlet UIView *spinerView;
 @property (nonatomic, strong) IFQuestionTableDelegate *questionTableDelegate;
+@property (nonatomic, strong) IFStackOverflowRequest *request;
+@property (nonatomic, assign) NSInteger currentPageRequest;
 
 @end
 
@@ -31,19 +33,23 @@ NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=
     self.questionTableDelegate = [[IFQuestionTableDelegate alloc] initWithDelegate:self];
     self.tableView.dataSource = self.questionTableDelegate;
     self.tableView.delegate = self.questionTableDelegate;
+    self.currentPageRequest = 1;
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];    
-    IFStackOverflowRequest *request = [[IFStackOverflowRequest alloc] initWithDelegate:self urlString:questionsUrlString];
-    [[request fetchQestions] start];
+    [super viewDidAppear:animated];
+    [self startQuestionsRequest];
     [self spinerAnimation:YES];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    self.tableView = nil;
+    self.spinerView = nil;
+    self.questionTableDelegate = nil;
+    self.request = nil;
 }
 
 #pragma mark - StackOverflowRequestDelegate
@@ -55,6 +61,7 @@ NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=
 
 - (void)receivedJSON: (NSDictionary *)json
 {
+    self.currentPageRequest++;
     [self spinerAnimation:NO];
     IFQuestionBuilder *questionBuilder = [IFQuestionBuilder new];
     NSArray *questions = [questionBuilder questionsFromJSON:json];
@@ -65,13 +72,24 @@ NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=
 #pragma mark - QuestionTableDelegate
 - (void)needMoreQuestions
 {
-    
+    [self startQuestionsRequest];
 }
 
 #pragma mark - Util
 -(void)spinerAnimation:(BOOL)animation
 {
     self.spinerView.hidden = !animation;
+}
+
+-(void)startQuestionsRequest
+{
+    self.request = [[IFStackOverflowRequest alloc] initWithDelegate:self urlString:[self urlString]];
+    [[self.request fetchQestions] start];
+}
+
+-(NSString *)urlString
+{
+    return [NSString stringWithFormat:questionsUrlStringFormat,self.currentPageRequest];
 }
 
 @end

@@ -69,7 +69,6 @@
 		788B8DFB166389A20060CDA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD2166389A20060CDA8 /* UIKit.framework */; };
 		788B8DFC166389A20060CDA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD4166389A20060CDA8 /* Foundation.framework */; };
 		788B8E04166389A20060CDA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 788B8E02166389A20060CDA8 /* InfoPlist.strings */; };
-		788B8E07166389A20060CDA8 /* use_bddTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 788B8E06166389A20060CDA8 /* use_bddTests.m */; };
 		78BC265B166500C700147AF1 /* MathSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC265A166500C700147AF1 /* MathSpec.m */; };
 		78BC265E1665017900147AF1 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BC265D1665017900147AF1 /* libKiwi.a */; };
 		78BC2684166516E400147AF1 /* IFViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC2683166516E400147AF1 /* IFViewControllerSpec.m */; };
@@ -151,8 +150,6 @@
 		788B8DF9166389A20060CDA8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		788B8E01166389A20060CDA8 /* use-bddTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "use-bddTests-Info.plist"; sourceTree = "<group>"; };
 		788B8E03166389A20060CDA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		788B8E05166389A20060CDA8 /* use_bddTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = use_bddTests.h; sourceTree = "<group>"; };
-		788B8E06166389A20060CDA8 /* use_bddTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = use_bddTests.m; sourceTree = "<group>"; };
 		78BC265A166500C700147AF1 /* MathSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathSpec.m; sourceTree = "<group>"; };
 		78BC265D1665017900147AF1 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "Frameworks/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
 		78BC2683166516E400147AF1 /* IFViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFViewControllerSpec.m; sourceTree = "<group>"; };
@@ -350,8 +347,6 @@
 		788B8DFF166389A20060CDA8 /* use-bddTests */ = {
 			isa = PBXGroup;
 			children = (
-				788B8E05166389A20060CDA8 /* use_bddTests.h */,
-				788B8E06166389A20060CDA8 /* use_bddTests.m */,
 				788B8E00166389A20060CDA8 /* Supporting Files */,
 				78BC265A166500C700147AF1 /* MathSpec.m */,
 				78BC2683166516E400147AF1 /* IFViewControllerSpec.m */,
@@ -547,7 +542,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				788B8E07166389A20060CDA8 /* use_bddTests.m in Sources */,
 				78BC265B166500C700147AF1 /* MathSpec.m in Sources */,
 				78BC2684166516E400147AF1 /* IFViewControllerSpec.m in Sources */,
 				783DA75E166666E00007EEB1 /* IFViewController.m in Sources */,

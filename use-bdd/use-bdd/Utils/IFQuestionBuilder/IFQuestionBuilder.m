@@ -16,7 +16,7 @@
 
 @implementation IFQuestionBuilder
 
-- (NSArray *)receivedJSON:(NSDictionary *)json
+- (NSArray *)questionsFromJSON:(NSDictionary *)json
 {
     NSArray *questions = [json objectForKey: @"questions"];
     if (json == nil || questions == nil)

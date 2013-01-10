@@ -64,7 +64,7 @@ describe(@"IFQuestionBuilderSpec", ^
         it(@"should parse JSON", ^
         {
             NSDictionary *json = [questionJSON objectFromJSONString];
-            NSArray *questions = [builder receivedJSON:json];
+            NSArray *questions = [builder questionsFromJSON:json];
             IFQuestion *question = [questions objectAtIndex:0];
             
             [[theValue(question.questionID) should] equal:theValue(2817980)];
@@ -80,11 +80,11 @@ describe(@"IFQuestionBuilderSpec", ^
         it(@"should process fake JSON", ^
         {
             NSDictionary *fakeJson = nil;
-            NSArray *questions = [builder receivedJSON:fakeJson];
+            NSArray *questions = [builder questionsFromJSON:fakeJson];
             [[questions should] haveCountOf:0];
             
             fakeJson = [NSDictionary dictionary];
-            questions = [builder receivedJSON:fakeJson];
+            questions = [builder questionsFromJSON:fakeJson];
             [[questions should] haveCountOf:0];
         });
         

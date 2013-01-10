@@ -12,7 +12,7 @@
 #import "IFQuestionBuilder.h"
 #import "IFQuestionTableDelegate.h"
 
-NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=iphone&pagesize=2";
+NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=iphone&pagesize=20";
 
 
 @interface IFViewController ()
@@ -56,6 +56,10 @@ NSString *questionsUrlString = @"http://api.stackoverflow.com/1.1/search?tagged=
 - (void)receivedJSON: (NSDictionary *)json
 {
     [self spinerAnimation:NO];
+    IFQuestionBuilder *questionBuilder = [IFQuestionBuilder new];
+    NSArray *questions = [questionBuilder questionsFromJSON:json];
+    [self.questionTableDelegate addQuestions:questions];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Util

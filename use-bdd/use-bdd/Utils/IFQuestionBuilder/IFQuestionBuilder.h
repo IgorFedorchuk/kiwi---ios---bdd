@@ -8,6 +8,6 @@
 
 @interface IFQuestionBuilder : NSObject
 
-- (NSArray *)receivedJSON:(NSDictionary *)json;
+- (NSArray *)questionsFromJSON:(NSDictionary *)json;
 
 @end

@@ -79,7 +79,7 @@ describe(@"IFViewController", ^{
             [[theValue(currenrPageRequest) should] equal:theValue(newPageRequest)];
         });
         
-        it(@"if request success then currentPageRequest should not been changed", ^
+        it(@"if request success then currentPageRequest should been changed", ^
         {
             NSInteger currenrPageRequest = [viewController integerValueForPropertyName:@"currentPageRequest"];
             [viewController receivedJSON:[NSDictionary dictionary]];

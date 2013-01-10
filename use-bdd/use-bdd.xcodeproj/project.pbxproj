@@ -70,7 +70,6 @@
 		788B8DFB166389A20060CDA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD2166389A20060CDA8 /* UIKit.framework */; };
 		788B8DFC166389A20060CDA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD4166389A20060CDA8 /* Foundation.framework */; };
 		788B8E04166389A20060CDA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 788B8E02166389A20060CDA8 /* InfoPlist.strings */; };
-		78BC265B166500C700147AF1 /* MathSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC265A166500C700147AF1 /* MathSpec.m */; };
 		78BC265E1665017900147AF1 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BC265D1665017900147AF1 /* libKiwi.a */; };
 		78BC2684166516E400147AF1 /* IFViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC2683166516E400147AF1 /* IFViewControllerSpec.m */; };
 		78FC7CEA169C31EB006BC5D1 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FC7CE9169C31EB006BC5D1 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -152,7 +151,6 @@
 		788B8DF9166389A20060CDA8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		788B8E01166389A20060CDA8 /* use-bddTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "use-bddTests-Info.plist"; sourceTree = "<group>"; };
 		788B8E03166389A20060CDA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		78BC265A166500C700147AF1 /* MathSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathSpec.m; sourceTree = "<group>"; };
 		78BC265D1665017900147AF1 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "Frameworks/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
 		78BC2683166516E400147AF1 /* IFViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFViewControllerSpec.m; sourceTree = "<group>"; };
 		78FC7CE8169C31EB006BC5D1 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
@@ -350,7 +348,6 @@
 			isa = PBXGroup;
 			children = (
 				788B8E00166389A20060CDA8 /* Supporting Files */,
-				78BC265A166500C700147AF1 /* MathSpec.m */,
 				78BC2683166516E400147AF1 /* IFViewControllerSpec.m */,
 				783DA797166675CB0007EEB1 /* IFQuestionBuilderSpec.m */,
 				787D8EB0169C65F00071C906 /* IFStackOverflowRequestSpec.m */,
@@ -545,7 +542,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78BC265B166500C700147AF1 /* MathSpec.m in Sources */,
 				78BC2684166516E400147AF1 /* IFViewControllerSpec.m in Sources */,
 				783DA75E166666E00007EEB1 /* IFViewController.m in Sources */,
 				783DA762166666F60007EEB1 /* IFStackOverflowRequest.m in Sources */,

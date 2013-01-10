@@ -180,10 +180,6 @@ describe(@"QuestionTableDelegateSpec", ^
             cell = [tableView cellForRowAtIndexPath:path];
             [tableDelegate tableView:tableView willDisplayCell:cell forRowAtIndexPath:path];
         });
-        it(@"", ^
-        {
-               
-        });
     });
 });
 

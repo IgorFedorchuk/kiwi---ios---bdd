@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		782F5320169EF11600F2B106 /* QuestionCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 782F531F169EF11600F2B106 /* QuestionCellSpec.m */; };
+		7830094B16A005C9005B70DD /* NSArray+UniqueArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 7830094A16A005C9005B70DD /* NSArray+UniqueArray.m */; };
+		7830094C16A005C9005B70DD /* NSArray+UniqueArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 7830094A16A005C9005B70DD /* NSArray+UniqueArray.m */; };
 		783DA742166662720007EEB1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783DA741166662720007EEB1 /* SystemConfiguration.framework */; };
 		783DA744166662AD0007EEB1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783DA743166662AD0007EEB1 /* MobileCoreServices.framework */; };
 		783DA745166662BB0007EEB1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783DA743166662AD0007EEB1 /* MobileCoreServices.framework */; };
@@ -87,6 +89,8 @@
 
 /* Begin PBXFileReference section */
 		782F531F169EF11600F2B106 /* QuestionCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionCellSpec.m; sourceTree = "<group>"; };
+		7830094916A005C9005B70DD /* NSArray+UniqueArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+UniqueArray.h"; sourceTree = "<group>"; };
+		7830094A16A005C9005B70DD /* NSArray+UniqueArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+UniqueArray.m"; sourceTree = "<group>"; };
 		783DA741166662720007EEB1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		783DA743166662AD0007EEB1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		783DA758166666E00007EEB1 /* IFViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IFViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -384,6 +388,8 @@
 			children = (
 				783DA793166675900007EEB1 /* NSObject+Properties.h */,
 				783DA794166675900007EEB1 /* NSObject+Properties.m */,
+				7830094916A005C9005B70DD /* NSArray+UniqueArray.h */,
+				7830094A16A005C9005B70DD /* NSArray+UniqueArray.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -535,6 +541,7 @@
 				787D8EB9169C85B50071C906 /* IFQuestionTableDelegate.m in Sources */,
 				785D6E33169D57090052EABB /* IFQuestionCell.m in Sources */,
 				785D6E4B169D7C750052EABB /* IFSpinerCell.m in Sources */,
+				7830094B16A005C9005B70DD /* NSArray+UniqueArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +571,7 @@
 				785D6E34169D57090052EABB /* IFQuestionCell.m in Sources */,
 				785D6E4C169D7C750052EABB /* IFSpinerCell.m in Sources */,
 				782F5320169EF11600F2B106 /* QuestionCellSpec.m in Sources */,
+				7830094C16A005C9005B70DD /* NSArray+UniqueArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

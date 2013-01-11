@@ -10,6 +10,8 @@
 #import "IFQuestionCell.h"
 #import "IFSpinerCell.h"
 #import "IFQuestion.h"
+#import "NSArray+UniqueArray.h"
+
 
 @interface IFQuestionTableDelegate()
 
@@ -50,8 +52,13 @@
                                                   ascending:NO];
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
     NSArray *sortedArray = [self.questions sortedArrayUsingDescriptors:sortDescriptors];
+    NSArray *uniqueArray = [sortedArray uniqueByBlock:^BOOL(id first, id second)
+                            {
+                                return [(IFQuestion*)first questionID] == [(IFQuestion*)second questionID];
+                            }];
+    
     self.questions = [NSMutableArray array];
-    [self.questions addObjectsFromArray:sortedArray];
+    [self.questions addObjectsFromArray:uniqueArray];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

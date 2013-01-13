@@ -27,11 +27,19 @@
 
 -(void)dealloc
 {
-    [self removeObserver:self forKeyPath:@"image"];
+    [self.askerAvatar removeObserver:self forKeyPath:@"image"];
+}
+
+-(void)awakeFromNib
+{
+    [super awakeFromNib];
+    [self.askerAvatar addObserver:self forKeyPath:@"image" options:NSKeyValueObservingOptionNew context:NULL];
 }
 
 -(void)configWithQuestion:(IFQuestion *)newQuestion
 {
+    [self.askerAvatar removeObserver:self forKeyPath:@"image"];
+
     self.question = newQuestion;
     self.spiner.hidden = NO;
     self.titleLabel.text = newQuestion.title;

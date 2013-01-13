@@ -148,9 +148,16 @@ describe(@"QuestionTableDelegateSpec", ^
             [tableDelegate addQuestions:@[q1, q2, q3, q4, q5, q6, q7, q8]];
     
             IFSpinerCell *cell = (IFSpinerCell *)[tableDelegate tableView:tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:9 inSection:0]];
-            
             NSString *cellClassName = NSStringFromClass ([cell class]);
             [[cellClassName should] equal:NSStringFromClass ([IFSpinerCell class])];
+
+            for(NSInteger i = 0; i < 9; i++)
+            {
+                cell = (IFSpinerCell *)[tableDelegate tableView:tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+                
+                cellClassName = NSStringFromClass ([cell class]);
+                [[cellClassName should] equal:NSStringFromClass ([IFQuestionCell class])];
+            }
         });
         
         it(@"Array of questions should be sorted", ^

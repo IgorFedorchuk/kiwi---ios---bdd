@@ -25,6 +25,11 @@
 
 @implementation IFQuestionCell
 
+-(void)dealloc
+{
+    [self removeObserver:self forKeyPath:@"image"];
+}
+
 -(void)configWithQuestion:(IFQuestion *)newQuestion
 {
     self.question = newQuestion;

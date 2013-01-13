@@ -37,7 +37,8 @@ describe(@"QuestionCellSpec", ^
 
         UIActivityIndicatorView *spiner = (UIActivityIndicatorView *)[cell objectForPropertyName:@"spiner"];
         [spiner shouldNotBeNil];
-        [[theValue(spiner.hidden) should] equal:theValue(NO)];        
+        [[theValue(spiner.hidden) should] equal:theValue(NO)];
+        [[theValue(spiner.isAnimating) should] equal:theValue(YES)];
     });
     
     it(@"spiner should be hidden when avatar is loaded", ^

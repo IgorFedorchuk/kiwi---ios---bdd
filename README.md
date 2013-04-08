@@ -1,4 +1,3 @@
-use-bdd
-=======
+Don't forget to initialize submodules:
 
-use-bdd
+$ git submodule update --init

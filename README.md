@@ -1,3 +1,6 @@
-Don't forget to initialize submodules:
+Clone project as
+$ git clone --recursive
+
+Or initialize submodules:
 
 $ git submodule update --init

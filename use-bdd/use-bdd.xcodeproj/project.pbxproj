@@ -693,6 +693,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "use-bdd/use-bdd-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks/Tuneup\"";
 				INFOPLIST_FILE = "use-bddTests/use-bddTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-all_load";
@@ -713,6 +714,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "use-bdd/use-bdd-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks/Tuneup\"";
 				INFOPLIST_FILE = "use-bddTests/use-bddTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-all_load";

@@ -6,14 +6,14 @@
 //  Copyright (c) 2012 IgorFedorchuk. All rights reserved.
 //
 
-@class AFJSONRequestOperation;
+@class AFHTTPRequestOperation;
 @protocol StackOverflowRequestDelegate;
 
 
 @interface IFStackOverflowRequest : NSObject
 
 -(id)initWithDelegate:(id<StackOverflowRequestDelegate>)delegate urlString:(NSString *)urlString;
--(AFJSONRequestOperation *)fetchQestions;
+-(AFHTTPRequestOperation *)fetchQestions;
 
 @end
 

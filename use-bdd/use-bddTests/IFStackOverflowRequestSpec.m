@@ -1,6 +1,6 @@
 #import "Kiwi.h"
 #import "IFStackOverflowRequest.h"
-#import "AFJSONRequestOperation.h"
+#import "AFNetworking.h"
 #import "IFViewController.h"
 
 //#define SpecRequests

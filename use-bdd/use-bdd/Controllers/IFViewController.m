@@ -8,7 +8,7 @@
 
 #import "IFViewController.h"
 #import "IFStackOverflowRequest.h"
-#import "AFJSONRequestOperation.h"
+#import "AFNetworking.h"
 #import "IFQuestionBuilder.h"
 
 NSString *questionsUrlStringFormat = @"http://api.stackoverflow.com/1.1/search?tagged=iphone&page=%d&pagesize=20&sort=creation";

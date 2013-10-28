@@ -7,7 +7,7 @@
 //
 
 #import "IFStackOverflowRequest.h"
-#import "AFJSONRequestOperation.h"
+#import "AFNetworking.h"
 
 @interface IFStackOverflowRequest()
 
@@ -28,21 +28,23 @@
     return self;
 }
 
--(AFJSONRequestOperation *)fetchQestions
+-(AFHTTPRequestOperation *)fetchQestions
 {
     NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
     
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject)
     {
-        NSLog(@"questions: %@", [JSON valueForKeyPath:@"questions"]);
-        [self.delegate receivedJSON:JSON];
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
+        NSLog(@"questions: %@", [responseObject valueForKeyPath:@"questions"]);
+        [self.delegate receivedJSON:responseObject];
+    }
+    failure:^(AFHTTPRequestOperation *operation, NSError *error)
     {
         NSLog(@"error: %@", error);
         [self.delegate fetchFailedWithError:error];
     }];
     return operation;
 }
-
 
 @end

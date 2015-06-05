@@ -7,20 +7,14 @@
 //
 
 #import "IFViewController.h"
-#import "IFStackOverflowRequest.h"
-#import "AFNetworking.h"
-#import "IFQuestionBuilder.h"
 #import "IFNetwork.h"
-
-NSString *questionsUrlStringFormat = @"http://api.stackoverflow.com/1.1/search?tagged=iphone&page=%d&pagesize=20&sort=creation";
-
 
 @interface IFViewController ()
 
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) IBOutlet UIView *spinerView;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UIView *spinerView;
+
 @property (nonatomic, strong) IFQuestionTableDelegate *questionTableDelegate;
-@property (nonatomic, strong) IFStackOverflowRequest *request;
 @property (nonatomic, assign) NSInteger currentPageRequest;
 
 @end
@@ -35,11 +29,7 @@ NSString *questionsUrlStringFormat = @"http://api.stackoverflow.com/1.1/search?t
     self.tableView.dataSource = self.questionTableDelegate;
     self.tableView.delegate = self.questionTableDelegate;
     self.currentPageRequest = 1;
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
+    
     [self startQuestionsRequest];
     [self spinerAnimation:YES];
 }
@@ -47,36 +37,18 @@ NSString *questionsUrlStringFormat = @"http://api.stackoverflow.com/1.1/search?t
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    self.tableView = nil;
-    self.spinerView = nil;
     self.questionTableDelegate = nil;
-    self.request = nil;
-}
-
-#pragma mark - StackOverflowRequestDelegate
-- (void)fetchFailedWithError: (NSError *)error
-{
-    [self spinerAnimation:NO];
-    [[[UIAlertView alloc] initWithTitle:@"Warning" message:@"Request is failed" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-}
-
-- (void)receivedJSON: (NSDictionary *)json
-{
-    self.currentPageRequest++;
-    [self spinerAnimation:NO];
-    IFQuestionBuilder *questionBuilder = [IFQuestionBuilder new];
-    NSArray *questions = [questionBuilder questionsFromJSON:json];
-    [self.questionTableDelegate addQuestions:questions];
-    [self.tableView reloadData];
 }
 
 #pragma mark - QuestionTableDelegate
+
 - (void)needMoreQuestions
 {
     [self startQuestionsRequest];
 }
 
-#pragma mark - Util
+#pragma mark - Private
+
 -(void)spinerAnimation:(BOOL)animation
 {
     self.spinerView.hidden = !animation;
@@ -84,16 +56,26 @@ NSString *questionsUrlStringFormat = @"http://api.stackoverflow.com/1.1/search?t
 
 -(void)startQuestionsRequest
 {
-    [[IFNetwork sharedInstance] iphoneTagAnswerWithPage:1 completion:^(BOOL success, NSArray *items) {
-        
+    __weak typeof(self) weakSelf = self;
+    [[IFNetwork sharedInstance] iphoneTagAnswerWithPage:self.currentPageRequest completion:^(BOOL success, NSArray *items) {
+        if (success)
+        {
+            weakSelf.currentPageRequest++;
+            [weakSelf spinerAnimation:NO];
+            [weakSelf.questionTableDelegate addQuestions:items];
+            [weakSelf.tableView reloadData];
+        }
+        else
+        {
+            [weakSelf fetchFailedWithError:nil];
+        }
     }];
-    self.request = [[IFStackOverflowRequest alloc] initWithDelegate:self urlString:[self urlString]];
-    [[self.request fetchQestions] start];
 }
 
--(NSString *)urlString
+- (void)fetchFailedWithError: (NSError *)error
 {
-    return [NSString stringWithFormat:questionsUrlStringFormat,self.currentPageRequest];
+    [self spinerAnimation:NO];
+    [[[UIAlertView alloc] initWithTitle:@"Warning" message:@"Request is failed" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
 @end

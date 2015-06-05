@@ -262,9 +262,9 @@
 		7885F6601B21602B001C179C /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				7885F66C1B216156001C179C /* AnswerRequest */,
 				7885F6611B216056001C179C /* IFNetwork.h */,
 				7885F6621B216056001C179C /* IFNetwork.m */,
+				7885F66C1B216156001C179C /* AnswerRequest */,
 				7885F6671B2160E7001C179C /* WebCore */,
 			);
 			path = Network;

@@ -22,7 +22,7 @@
 {
     if (self = [super init])
     {
-        NSString *urlString = [NSString stringWithFormat:@"http://api.stackexchange.com/2.2/questions?page=%ld&pagesize=5&order=desc&sort=activity&tagged=iphone&site=stackoverflow", (long)page];
+        NSString *urlString = [NSString stringWithFormat:@"http://api.stackexchange.com/2.2/questions?page=%ld&pagesize=10&order=desc&sort=activity&tagged=iphone&site=stackoverflow", (long)page];
         self.url = [NSURL URLWithString:urlString];
         NSLog(@"++++++++++urlString: %@", urlString);
     }

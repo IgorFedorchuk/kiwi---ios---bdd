@@ -34,7 +34,6 @@
 		785D6E4C169D7C750052EABB /* IFSpinerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 785D6E49169D7C750052EABB /* IFSpinerCell.m */; };
 		785D6E4D169D7C750052EABB /* IFSpinerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 785D6E4A169D7C750052EABB /* IFSpinerCell.xib */; };
 		785D6E4E169D7C750052EABB /* IFSpinerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 785D6E4A169D7C750052EABB /* IFSpinerCell.xib */; };
-		787D8EAE169C49C40071C906 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FC7CE9169C31EB006BC5D1 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		787D8EB5169C73A40071C906 /* IFPersonBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB4169C73A40071C906 /* IFPersonBuilder.m */; };
 		787D8EB9169C85B50071C906 /* IFQuestionTableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB8169C85B50071C906 /* IFQuestionTableDelegate.m */; };
 		787D8EBA169C85B50071C906 /* IFQuestionTableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB8169C85B50071C906 /* IFQuestionTableDelegate.m */; };
@@ -60,7 +59,6 @@
 		78F7B493181E94E100D68530 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F7B492181E94E000D68530 /* Security.framework */; };
 		78F7B494181E98FF00D68530 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F7B492181E94E000D68530 /* Security.framework */; };
 		78F7B495181E990F00D68530 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD6166389A20060CDA8 /* CoreGraphics.framework */; };
-		78FC7CEA169C31EB006BC5D1 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FC7CE9169C31EB006BC5D1 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CCC1D918FA27EB10A9058C82 /* libPods-use-bddTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 016F019E846BA7CF23686C1B /* libPods-use-bddTests.a */; };
 /* End PBXBuildFile section */
 
@@ -112,11 +110,11 @@
 		787D8EBC169C85D70071C906 /* QuestionTableDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableDelegateSpec.m; sourceTree = "<group>"; };
 		7885F6611B216056001C179C /* IFNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFNetwork.h; sourceTree = "<group>"; };
 		7885F6621B216056001C179C /* IFNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFNetwork.m; sourceTree = "<group>"; };
-		7885F6661B2160A0001C179C /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		7885F6681B2160E7001C179C /* IFWebCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFWebCore.h; sourceTree = "<group>"; };
 		7885F6691B2160E7001C179C /* IFWebCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFWebCore.m; sourceTree = "<group>"; };
 		7885F66D1B216190001C179C /* IFAnswerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFAnswerRequest.h; sourceTree = "<group>"; };
 		7885F66E1B216190001C179C /* IFAnswerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFAnswerRequest.m; sourceTree = "<group>"; };
+		7885F6A11B21794F001C179C /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		788B8DCE166389A20060CDA8 /* use-bdd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "use-bdd.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		788B8DD2166389A20060CDA8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		788B8DD4166389A20060CDA8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -137,8 +135,6 @@
 		78BC265D1665017900147AF1 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "Frameworks/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
 		78BC2683166516E400147AF1 /* IFViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFViewControllerSpec.m; sourceTree = "<group>"; };
 		78F7B492181E94E000D68530 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		78FC7CE8169C31EB006BC5D1 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		78FC7CE9169C31EB006BC5D1 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		B2866077FDE61D3DB32C1131 /* Pods-use-bdd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-use-bdd.release.xcconfig"; path = "Pods/Target Support Files/Pods-use-bdd/Pods-use-bdd.release.xcconfig"; sourceTree = "<group>"; };
 		D251DBCD10DA1421AB722173 /* Pods-use-bddTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-use-bddTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-use-bddTests/Pods-use-bddTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -270,15 +266,6 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		7885F6651B2160A0001C179C /* SynthesizeSingleton */ = {
-			isa = PBXGroup;
-			children = (
-				7885F6661B2160A0001C179C /* SynthesizeSingleton.h */,
-			);
-			name = SynthesizeSingleton;
-			path = ../../../../../Desktop/SynthesizeSingleton;
-			sourceTree = "<group>";
-		};
 		7885F6671B2160E7001C179C /* WebCore */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +282,14 @@
 				7885F66E1B216190001C179C /* IFAnswerRequest.m */,
 			);
 			path = AnswerRequest;
+			sourceTree = "<group>";
+		};
+		7885F6A01B21794F001C179C /* SynthesizeSingleton */ = {
+			isa = PBXGroup;
+			children = (
+				7885F6A11B21794F001C179C /* SynthesizeSingleton.h */,
+			);
+			path = SynthesizeSingleton;
 			sourceTree = "<group>";
 		};
 		788B8DC3166389A20060CDA8 = {
@@ -387,9 +382,8 @@
 		78BC268916651FF900147AF1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				7885F6651B2160A0001C179C /* SynthesizeSingleton */,
+				7885F6A01B21794F001C179C /* SynthesizeSingleton */,
 				787D8EB2169C736F0071C906 /* PersonBuilder */,
-				78FC7CE7169C31EB006BC5D1 /* JSONKit */,
 				783DA788166672860007EEB1 /* IFQuestionBuilder */,
 				783DA74C166665BF0007EEB1 /* StackOverflowRequest */,
 				78BC268A1665200500147AF1 /* Categories */,
@@ -406,15 +400,6 @@
 				7830094A16A005C9005B70DD /* NSArray+UniqueArray.m */,
 			);
 			path = Categories;
-			sourceTree = "<group>";
-		};
-		78FC7CE7169C31EB006BC5D1 /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				78FC7CE8169C31EB006BC5D1 /* JSONKit.h */,
-				78FC7CE9169C31EB006BC5D1 /* JSONKit.m */,
-			);
-			path = JSONKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,6 +452,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = IF;
+				LastTestingUpgradeCheck = 0630;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = IgorFedorchuk;
 			};
@@ -607,7 +593,6 @@
 				78412292168C68B800CC8FAE /* IFPerson.m in Sources */,
 				78412293168C68B800CC8FAE /* IFQuestion.m in Sources */,
 				7885F66F1B216190001C179C /* IFAnswerRequest.m in Sources */,
-				78FC7CEA169C31EB006BC5D1 /* JSONKit.m in Sources */,
 				787D8EB5169C73A40071C906 /* IFPersonBuilder.m in Sources */,
 				787D8EB9169C85B50071C906 /* IFQuestionTableDelegate.m in Sources */,
 				7885F66A1B2160E7001C179C /* IFWebCore.m in Sources */,
@@ -627,7 +612,6 @@
 				783DA7901666745D0007EEB1 /* IFQuestionBuilder.m in Sources */,
 				7885F66B1B2160E7001C179C /* IFWebCore.m in Sources */,
 				783DA796166675900007EEB1 /* NSObject+Properties.m in Sources */,
-				787D8EAE169C49C40071C906 /* JSONKit.m in Sources */,
 				7885F6641B216056001C179C /* IFNetwork.m in Sources */,
 				787D8EBA169C85B50071C906 /* IFQuestionTableDelegate.m in Sources */,
 				785D6E34169D57090052EABB /* IFQuestionCell.m in Sources */,

@@ -11,9 +11,6 @@
 
 @interface IFAppDelegate()
 
-@property (nonatomic, strong) UINavigationController *navigationController;
-@property (nonatomic, strong) IFViewController *viewController;
-
 @end
 
 @implementation IFAppDelegate
@@ -22,10 +19,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.viewController = [[IFViewController alloc] initWithNibName:@"IFViewController_iPhone" bundle:nil];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    IFViewController *viewController = [[IFViewController alloc] initWithNibName:@"IFViewController_iPhone" bundle:nil];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
 
-    self.window.rootViewController = self.navigationController;
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }

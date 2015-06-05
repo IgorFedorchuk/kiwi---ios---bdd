@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>75B8244E-E132-4029-9C1C-2C25AD6584A3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>use-bdd</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4FD7C20106F5BD91089CFF7BC197AC2E448D173B</key>
+		<string>https://github.com/allending/Kiwi.git</string>
+		<key>BDC972985876DD1B83132AC123903CE3FB6A0A4D</key>
+		<string>https://github.com/IgorFedorchuk/kiwi---ios---bdd.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>use-bdd/use-bdd.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4FD7C20106F5BD91089CFF7BC197AC2E448D173B</key>
+		<string>../..use-bdd/Frameworks/Kiwi</string>
+		<key>BDC972985876DD1B83132AC123903CE3FB6A0A4D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/IgorFedorchuk/kiwi---ios---bdd.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BDC972985876DD1B83132AC123903CE3FB6A0A4D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4FD7C20106F5BD91089CFF7BC197AC2E448D173B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Kiwi</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BDC972985876DD1B83132AC123903CE3FB6A0A4D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>kiwi---ios---bdd</string>
+		</dict>
+	</array>
+</dict>
+</plist>

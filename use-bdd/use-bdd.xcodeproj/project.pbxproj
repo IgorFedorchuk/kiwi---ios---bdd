@@ -13,7 +13,6 @@
 		783DA746166662CB0007EEB1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783DA741166662720007EEB1 /* SystemConfiguration.framework */; };
 		783DA75B166666E00007EEB1 /* IFViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783DA758166666E00007EEB1 /* IFViewController_iPhone.xib */; };
 		783DA75D166666E00007EEB1 /* IFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA75A166666E00007EEB1 /* IFViewController.m */; };
-		783DA761166666F60007EEB1 /* IFStackOverflowRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA760166666F60007EEB1 /* IFStackOverflowRequest.m */; };
 		783DA78F1666745D0007EEB1 /* IFQuestionBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA78E1666745D0007EEB1 /* IFQuestionBuilder.m */; };
 		783DA795166675900007EEB1 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA794166675900007EEB1 /* NSObject+Properties.m */; };
 		78412292168C68B800CC8FAE /* IFPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 7841228E168C68B800CC8FAE /* IFPerson.m */; };
@@ -44,7 +43,6 @@
 		7885F6BF1B217C33001C179C /* IFViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783DA758166666E00007EEB1 /* IFViewController_iPhone.xib */; };
 		7885F6C01B217C40001C179C /* IFPersonBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EB4169C73A40071C906 /* IFPersonBuilder.m */; };
 		7885F6C11B217C45001C179C /* IFQuestionBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA78E1666745D0007EEB1 /* IFQuestionBuilder.m */; };
-		7885F6C21B217C48001C179C /* IFStackOverflowRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA760166666F60007EEB1 /* IFStackOverflowRequest.m */; };
 		7885F6C31B217C4D001C179C /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA794166675900007EEB1 /* NSObject+Properties.m */; };
 		7885F6C41B217C4F001C179C /* NSArray+UniqueArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 7830094A16A005C9005B70DD /* NSArray+UniqueArray.m */; };
 		7885F6C51B217C6F001C179C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F7B492181E94E000D68530 /* Security.framework */; };
@@ -91,8 +89,6 @@
 		783DA758166666E00007EEB1 /* IFViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IFViewController_iPhone.xib; sourceTree = "<group>"; };
 		783DA759166666E00007EEB1 /* IFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFViewController.h; sourceTree = "<group>"; };
 		783DA75A166666E00007EEB1 /* IFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFViewController.m; sourceTree = "<group>"; };
-		783DA75F166666F60007EEB1 /* IFStackOverflowRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFStackOverflowRequest.h; sourceTree = "<group>"; };
-		783DA760166666F60007EEB1 /* IFStackOverflowRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFStackOverflowRequest.m; sourceTree = "<group>"; };
 		783DA78D1666745D0007EEB1 /* IFQuestionBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFQuestionBuilder.h; sourceTree = "<group>"; };
 		783DA78E1666745D0007EEB1 /* IFQuestionBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQuestionBuilder.m; sourceTree = "<group>"; };
 		783DA793166675900007EEB1 /* NSObject+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Properties.h"; sourceTree = "<group>"; };
@@ -122,7 +118,6 @@
 		7885F6A91B217A48001C179C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7885F6AA1B217A48001C179C /* test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
 		7885F6CD1B218143001C179C /* IFQuestionBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFQuestionBuilderSpec.m; sourceTree = "<group>"; };
-		7885F6CE1B218143001C179C /* IFStackOverflowRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFStackOverflowRequestSpec.m; sourceTree = "<group>"; };
 		7885F6CF1B218143001C179C /* IFViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFViewControllerSpec.m; sourceTree = "<group>"; };
 		7885F6D01B218143001C179C /* QuestionCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionCellSpec.m; sourceTree = "<group>"; };
 		7885F6D11B218143001C179C /* QuestionTableDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableDelegateSpec.m; sourceTree = "<group>"; };
@@ -205,15 +200,6 @@
 				787D8EB8169C85B50071C906 /* IFQuestionTableDelegate.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		783DA74C166665BF0007EEB1 /* StackOverflowRequest */ = {
-			isa = PBXGroup;
-			children = (
-				783DA75F166666F60007EEB1 /* IFStackOverflowRequest.h */,
-				783DA760166666F60007EEB1 /* IFStackOverflowRequest.m */,
-			);
-			path = StackOverflowRequest;
 			sourceTree = "<group>";
 		};
 		783DA788166672860007EEB1 /* IFQuestionBuilder */ = {
@@ -306,7 +292,6 @@
 			isa = PBXGroup;
 			children = (
 				7885F6CD1B218143001C179C /* IFQuestionBuilderSpec.m */,
-				7885F6CE1B218143001C179C /* IFStackOverflowRequestSpec.m */,
 				7885F6CF1B218143001C179C /* IFViewControllerSpec.m */,
 				7885F6D01B218143001C179C /* QuestionCellSpec.m */,
 				7885F6D11B218143001C179C /* QuestionTableDelegateSpec.m */,
@@ -397,7 +382,6 @@
 				7885F6A01B21794F001C179C /* SynthesizeSingleton */,
 				787D8EB2169C736F0071C906 /* PersonBuilder */,
 				783DA788166672860007EEB1 /* IFQuestionBuilder */,
-				783DA74C166665BF0007EEB1 /* StackOverflowRequest */,
 				78BC268A1665200500147AF1 /* Categories */,
 			);
 			path = Utils;
@@ -595,7 +579,6 @@
 				7885F6C31B217C4D001C179C /* NSObject+Properties.m in Sources */,
 				7885F6DA1B2181E2001C179C /* IFNetworkSpec.m in Sources */,
 				7885F6BB1B217C21001C179C /* IFPerson.m in Sources */,
-				7885F6C21B217C48001C179C /* IFStackOverflowRequest.m in Sources */,
 				7885F6AB1B217A48001C179C /* test.m in Sources */,
 				7885F6BA1B217C1D001C179C /* IFWebCore.m in Sources */,
 				7885F6C01B217C40001C179C /* IFPersonBuilder.m in Sources */,
@@ -615,7 +598,6 @@
 				788B8DDF166389A20060CDA8 /* main.m in Sources */,
 				788B8DE3166389A20060CDA8 /* IFAppDelegate.m in Sources */,
 				783DA75D166666E00007EEB1 /* IFViewController.m in Sources */,
-				783DA761166666F60007EEB1 /* IFStackOverflowRequest.m in Sources */,
 				783DA78F1666745D0007EEB1 /* IFQuestionBuilder.m in Sources */,
 				783DA795166675900007EEB1 /* NSObject+Properties.m in Sources */,
 				78412292168C68B800CC8FAE /* IFPerson.m in Sources */,

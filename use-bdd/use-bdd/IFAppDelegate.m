@@ -7,7 +7,6 @@
 //
 
 #import "IFAppDelegate.h"
-
 #import "IFViewController.h"
 
 @interface IFAppDelegate()

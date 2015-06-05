@@ -17,3 +17,9 @@ pod 'Kiwi'
 
 end
 
+target 'test' do
+    
+    pod 'AFNetworking'
+    pod 'Kiwi'
+    
+end

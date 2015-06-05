@@ -30,14 +30,7 @@
 }
 
 - (void)sendWithCompletion:(IFItemsRequestBlock)completion
-{
-    static NSOperationQueue *operationQueue = nil;
-    if (operationQueue == nil)
-    {
-        operationQueue = [NSOperationQueue new];
-        operationQueue.maxConcurrentOperationCount = 1;
-    }
-    
+{    
     [IFWebCore requestWithUrl:self.url success:^(NSData *data) {
         id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         if (completion)

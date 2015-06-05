@@ -12,6 +12,6 @@
 @property (nonatomic, strong, readonly) NSString *name;
 @property (nonatomic, strong, readonly) NSURL *avatarURL;
 
-- (id)initWithName: (NSString *)aName avatarLocation: (NSString *)location;
+- (instancetype)initWithName: (NSString *)aName avatarLocation: (NSString *)location;
 
 @end

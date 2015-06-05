@@ -1,6 +1,5 @@
 #import "Kiwi.h"
 #import "IFQuestionBuilder.h"
-#import "JSONKit.h"
 #import "IFQuestion.h"
 #import "IFPerson.h"
 
@@ -9,7 +8,7 @@ static NSString *questionJSON = @"{"
 @"\"total\": 1,"
 @"\"page\": 1,"
 @"\"pagesize\": 30,"
-@"\"questions\": ["
+@"\"items\": ["
 @"{"
 @"\"tags\": ["
 @"\"iphone\","
@@ -27,6 +26,7 @@ static NSString *questionJSON = @"{"
 @"\"user_id\": 23743,"
 @"\"user_type\": \"registered\","
 @"\"display_name\": \"Igor Fedorchuk\","
+@"\"profile_image\": \"http://graph.facebook.com/863798233670142/picture?type=large\","
 @"\"reputation\": 13459,"
 @"\"email_hash\": \"563290c0c1b776a315b36e863b388a0c\""
 @"},"
@@ -42,7 +42,6 @@ static NSString *questionJSON = @"{"
 @"}"
 @"]"
 @"}";
-
 
 SPEC_BEGIN(IFQuestionBuilderSpec)
 
@@ -63,7 +62,10 @@ describe(@"IFQuestionBuilderSpec", ^
 
         it(@"should parse JSON", ^
         {
-            NSDictionary *json = [questionJSON objectFromJSONString];
+            NSData *data = [questionJSON dataUsingEncoding:NSUTF8StringEncoding];
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            
+            //NSDictionary *json = [questionJSON objectFromJSONString];
             NSArray *questions = [builder questionsFromJSON:json];
             IFQuestion *question = [questions objectAtIndex:0];
             
@@ -74,7 +76,7 @@ describe(@"IFQuestionBuilderSpec", ^
 
             IFPerson *asker = question.asker;
             [[asker.name should] equal:@"Igor Fedorchuk"];
-            [[[asker.avatarURL absoluteString] should] equal:@"http://www.gravatar.com/avatar/563290c0c1b776a315b36e863b388a0c"];
+            [[[asker.avatarURL absoluteString] should] equal:@"http://graph.facebook.com/863798233670142/picture?type=large"];
         });
         
         it(@"should process fake JSON", ^

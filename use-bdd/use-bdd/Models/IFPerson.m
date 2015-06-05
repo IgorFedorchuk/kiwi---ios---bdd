@@ -17,14 +17,14 @@
 
 @implementation IFPerson
 
-- (instancetype)initWithName:(NSString *)aName avatarLocation:(NSString *)avatarLocation
+- (instancetype)initWithName:(NSString *)aName avatarURLString:(NSString *)avatarURLString
 {
     if ((self = [super init]))
     {
         self.name = [aName copy];
-        if (avatarLocation)
+        if (avatarURLString)
         {
-            self.avatarURL = [[NSURL alloc] initWithString:avatarLocation];
+            self.avatarURL = [[NSURL alloc] initWithString:avatarURLString];
         }
     }
     return self;

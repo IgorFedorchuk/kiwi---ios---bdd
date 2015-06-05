@@ -12,21 +12,20 @@
 #import "IFQuestion.h"
 #import "NSArray+UniqueArray.h"
 
-
 @interface IFQuestionTableDelegate()
 
-@property(nonatomic, strong) NSMutableArray *questions;
-@property(nonatomic, strong) IBOutlet IFQuestionCell *questionCell;
-@property(nonatomic, strong) IBOutlet IFSpinerCell *spinerCell;
-
+@property(nonatomic, weak) IBOutlet IFQuestionCell *questionCell;
+@property(nonatomic, weak) IBOutlet IFSpinerCell *spinerCell;
 @property(nonatomic, weak) id<QuestionTableDelegate> delegate;
+
+@property(nonatomic, strong) NSMutableArray *questions;
 
 @end
 
 
 @implementation IFQuestionTableDelegate
 
--(id)init
+-(instancetype)init
 {
     if (self = [super init])
     {
@@ -35,7 +34,7 @@
     return self;
 }
 
--(id)initWithDelegate:(id<QuestionTableDelegate>)tableDelegate
+-(instancetype)initWithDelegate:(id<QuestionTableDelegate>)tableDelegate
 {
     if (self = [self init])
     {

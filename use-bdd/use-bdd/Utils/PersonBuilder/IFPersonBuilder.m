@@ -11,11 +11,11 @@
 
 @implementation IFPersonBuilder
 
-+ (IFPerson *) personFromDictionary: (NSDictionary *) ownerValues
++ (IFPerson *)personFromDictionary:(NSDictionary *)ownerValues
 {
     NSString *name = [ownerValues objectForKey: @"display_name"];
     NSString *avatarURL = [ownerValues objectForKey: @"profile_image"];
-    return [[IFPerson alloc] initWithName: name avatarLocation: avatarURL];
+    return [[IFPerson alloc] initWithName:name avatarURLString:avatarURL];
 }
 
 @end

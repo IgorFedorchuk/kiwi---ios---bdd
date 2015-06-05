@@ -10,7 +10,7 @@
 
 @interface IFQuestionTableDelegate : NSObject <UITableViewDataSource, UITableViewDelegate>
 
--(id)initWithDelegate:(id<QuestionTableDelegate>)delegate;
+-(instancetype)initWithDelegate:(id<QuestionTableDelegate>)delegate;
 -(void)addQuestions:(NSArray *)newQuestions;
 
 @end

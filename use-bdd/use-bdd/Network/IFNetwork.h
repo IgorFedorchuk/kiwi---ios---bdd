@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^IFItemsRequestBlock)(BOOL success, NSArray *items);
+
 @interface IFNetwork : NSObject
 
 + (instancetype)sharedInstance;
+
+- (void)iphoneTagAnswerWithPage:(NSInteger)page completion:(IFItemsRequestBlock)completion;
 
 @end

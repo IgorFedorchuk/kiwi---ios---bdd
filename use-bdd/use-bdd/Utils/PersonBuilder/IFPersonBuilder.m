@@ -14,9 +14,8 @@
 + (IFPerson *) personFromDictionary: (NSDictionary *) ownerValues
 {
     NSString *name = [ownerValues objectForKey: @"display_name"];
-    NSString *avatarURL = [NSString stringWithFormat: @"http://www.gravatar.com/avatar/%@", [ownerValues objectForKey: @"email_hash"]];
+    NSString *avatarURL = [ownerValues objectForKey: @"profile_image"];
     return [[IFPerson alloc] initWithName: name avatarLocation: avatarURL];
 }
-
 
 @end

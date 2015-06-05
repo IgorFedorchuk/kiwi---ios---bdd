@@ -27,5 +27,14 @@
     return self;
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"name %@, avatarURL: %@", self.name, self.avatarURL];
+}
+
+- (NSString *)debugDescription
+{
+    return [self description];
+}
 
 @end

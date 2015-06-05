@@ -18,7 +18,7 @@
 
 - (NSArray *)questionsFromJSON:(NSDictionary *)json
 {
-    NSArray *questions = [json objectForKey: @"questions"];
+    NSArray *questions = [json objectForKey: @"items"];
     if (json == nil || questions == nil)
     {
         return [NSArray array];

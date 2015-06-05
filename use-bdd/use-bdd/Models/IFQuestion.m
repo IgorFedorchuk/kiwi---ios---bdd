@@ -16,5 +16,14 @@
 
 @implementation IFQuestion
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"\n questionID: %lu, title %@, asker: %@", (long)self.questionID, self.title, self.asker];
+}
+
+- (NSString *)debugDescription
+{
+    return [self description];
+}
 
 @end

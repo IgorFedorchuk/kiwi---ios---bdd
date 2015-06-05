@@ -10,6 +10,7 @@
 #import "IFStackOverflowRequest.h"
 #import "AFNetworking.h"
 #import "IFQuestionBuilder.h"
+#import "IFNetwork.h"
 
 NSString *questionsUrlStringFormat = @"http://api.stackoverflow.com/1.1/search?tagged=iphone&page=%d&pagesize=20&sort=creation";
 
@@ -83,6 +84,9 @@ NSString *questionsUrlStringFormat = @"http://api.stackoverflow.com/1.1/search?t
 
 -(void)startQuestionsRequest
 {
+    [[IFNetwork sharedInstance] iphoneTagAnswerWithPage:1 completion:^(BOOL success, NSArray *items) {
+        
+    }];
     self.request = [[IFStackOverflowRequest alloc] initWithDelegate:self urlString:[self urlString]];
     [[self.request fetchQestions] start];
 }

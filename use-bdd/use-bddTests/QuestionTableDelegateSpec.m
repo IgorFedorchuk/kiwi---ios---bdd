@@ -33,13 +33,13 @@ describe(@"QuestionTableDelegateSpec", ^
             first.title = @"No";
             first.score = 1;
             first.questionID = 1000;
-            first.asker = [[IFPerson alloc] initWithName:@"Igor" avatarLocation:@"Igor1"];
+            first.asker = [[IFPerson alloc] initWithName:@"Igor" avatarURLString:@"Igor1"];
             first.date = [NSDate dateWithTimeIntervalSince1970: 1273660706];
 
             IFQuestion *second = [IFQuestion new];
             second.title = @"Yes";
             second.score = 2;
-            second.asker = [[IFPerson alloc] initWithName:@"Bill" avatarLocation:@"Bill1"];
+            second.asker = [[IFPerson alloc] initWithName:@"Bill" avatarURLString:@"Bill1"];
             second.date = [NSDate dateWithTimeIntervalSince1970: 1273680706];
             second.questionID = 1001;
             
@@ -100,7 +100,7 @@ describe(@"QuestionTableDelegateSpec", ^
             UILabel *askerNameLabel = (UILabel *)[cell1 objectForPropertyName:@"askerNameLabel"];
 
             [[titleLabel.text should] equal:@"Yes"];
-            [[scoreLabel.text should] equal:@"2"];
+            [[scoreLabel.text should] equal:@"score:2"];
             [[askerNameLabel.text should] equal:@"Bill"];
             
             IFQuestionCell *cell2 = (IFQuestionCell *)[tableDelegate tableView:tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
@@ -109,7 +109,7 @@ describe(@"QuestionTableDelegateSpec", ^
             askerNameLabel = (UILabel *)[cell2 objectForPropertyName:@"askerNameLabel"];
             
             [[titleLabel.text should] equal:@"No"];
-            [[scoreLabel.text should] equal:@"1"];
+            [[scoreLabel.text should] equal:@"score:1"];
             [[askerNameLabel.text should] equal:@"Igor"];
         });
         

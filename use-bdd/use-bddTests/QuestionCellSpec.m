@@ -19,7 +19,7 @@ describe(@"QuestionCellSpec", ^
         IFQuestion *first = [IFQuestion new];
         first.title = @"No";
         first.score = 1;
-        first.asker = [[IFPerson alloc] initWithName:@"Igor" avatarLocation:@"Igor1"];        
+        first.asker = [[IFPerson alloc] initWithName:@"Igor" avatarURLString:@"Igor1"];
         [tableDelegate addQuestions:@[first]];        
     });
     

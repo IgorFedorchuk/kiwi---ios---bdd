@@ -67,6 +67,8 @@
 		7885F6C51B217C6F001C179C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F7B492181E94E000D68530 /* Security.framework */; };
 		7885F6C61B217C75001C179C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD6166389A20060CDA8 /* CoreGraphics.framework */; };
 		7885F6C71B217D5D001C179C /* IFQuestionBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 783DA797166675CB0007EEB1 /* IFQuestionBuilderSpec.m */; };
+		7885F6CA1B217FB6001C179C /* QuestionCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 782F531F169EF11600F2B106 /* QuestionCellSpec.m */; };
+		7885F6CB1B217FCB001C179C /* QuestionTableDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D8EBC169C85D70071C906 /* QuestionTableDelegateSpec.m */; };
 		788B8DD3166389A20060CDA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD2166389A20060CDA8 /* UIKit.framework */; };
 		788B8DD5166389A20060CDA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD4166389A20060CDA8 /* Foundation.framework */; };
 		788B8DD7166389A20060CDA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788B8DD6166389A20060CDA8 /* CoreGraphics.framework */; };
@@ -724,6 +726,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7885F6B91B217C1A001C179C /* IFAnswerRequest.m in Sources */,
+				7885F6CA1B217FB6001C179C /* QuestionCellSpec.m in Sources */,
 				7885F6BC1B217C25001C179C /* IFQuestion.m in Sources */,
 				7885F6B81B217C14001C179C /* IFNetwork.m in Sources */,
 				7885F6BD1B217C2A001C179C /* IFSpinerCell.m in Sources */,
@@ -736,6 +739,7 @@
 				7885F6BA1B217C1D001C179C /* IFWebCore.m in Sources */,
 				7885F6C71B217D5D001C179C /* IFQuestionBuilderSpec.m in Sources */,
 				7885F6C01B217C40001C179C /* IFPersonBuilder.m in Sources */,
+				7885F6CB1B217FCB001C179C /* QuestionTableDelegateSpec.m in Sources */,
 				7885F6C41B217C4F001C179C /* NSArray+UniqueArray.m in Sources */,
 				7885F6B71B217BEB001C179C /* IFQuestionTableDelegate.m in Sources */,
 				7885F6B61B217BD6001C179C /* IFViewController.m in Sources */,

@@ -91,6 +91,16 @@
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([self isLastRow:indexPath.row andNotVisibleOnTable:tableView])
+    {
+        return 50;
+    }
+    
+    return 120;
+}
+
 #pragma mark - Util
 -(UITableViewCell *)createCellForTable:(UITableView *)tableView forRow:(NSInteger)row
 {

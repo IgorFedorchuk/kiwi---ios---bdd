@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7780D4031B722484006F0F15 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7780D3FF1B722484006F0F15 /* libz.dylib */; };
+		7780D4041B722484006F0F15 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7780D4001B722484006F0F15 /* libc++.dylib */; };
+		7780D4051B722484006F0F15 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7780D4011B722484006F0F15 /* Fabric.framework */; };
+		7780D4061B722484006F0F15 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7780D4021B722484006F0F15 /* Crashlytics.framework */; };
 		779413AAF239693E2F2F3E60 /* libPods-use-bdd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 686B2538E70B577D5E1BAC5B /* libPods-use-bdd.a */; };
 		7830094B16A005C9005B70DD /* NSArray+UniqueArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 7830094A16A005C9005B70DD /* NSArray+UniqueArray.m */; };
 		783DA745166662BB0007EEB1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783DA743166662AD0007EEB1 /* MobileCoreServices.framework */; };
@@ -82,6 +86,10 @@
 		308E3F5E13DE9CC3D72E8B80 /* Pods-use-bddTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-use-bddTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-use-bddTests/Pods-use-bddTests.debug.xcconfig"; sourceTree = "<group>"; };
 		37F39D53BB00490BD8AE30A6 /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
 		686B2538E70B577D5E1BAC5B /* libPods-use-bdd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-use-bdd.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7780D3FF1B722484006F0F15 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libz.dylib; sourceTree = "<group>"; };
+		7780D4001B722484006F0F15 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libc++.dylib"; sourceTree = "<group>"; };
+		7780D4011B722484006F0F15 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		7780D4021B722484006F0F15 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		7830094916A005C9005B70DD /* NSArray+UniqueArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+UniqueArray.h"; sourceTree = "<group>"; };
 		7830094A16A005C9005B70DD /* NSArray+UniqueArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+UniqueArray.m"; sourceTree = "<group>"; };
 		783DA741166662720007EEB1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -163,12 +171,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				78F7B493181E94E100D68530 /* Security.framework in Frameworks */,
+				7780D4051B722484006F0F15 /* Fabric.framework in Frameworks */,
 				783DA746166662CB0007EEB1 /* SystemConfiguration.framework in Frameworks */,
 				783DA745166662BB0007EEB1 /* MobileCoreServices.framework in Frameworks */,
 				788B8DD3166389A20060CDA8 /* UIKit.framework in Frameworks */,
+				7780D4041B722484006F0F15 /* libc++.dylib in Frameworks */,
 				788B8DD5166389A20060CDA8 /* Foundation.framework in Frameworks */,
+				7780D4031B722484006F0F15 /* libz.dylib in Frameworks */,
 				788B8DD7166389A20060CDA8 /* CoreGraphics.framework in Frameworks */,
 				779413AAF239693E2F2F3E60 /* libPods-use-bdd.a in Frameworks */,
+				7780D4061B722484006F0F15 /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +325,10 @@
 		788B8DC3166389A20060CDA8 = {
 			isa = PBXGroup;
 			children = (
+				7780D3FF1B722484006F0F15 /* libz.dylib */,
+				7780D4001B722484006F0F15 /* libc++.dylib */,
+				7780D4011B722484006F0F15 /* Fabric.framework */,
+				7780D4021B722484006F0F15 /* Crashlytics.framework */,
 				788B8DD8166389A20060CDA8 /* use-bdd */,
 				7885F6A71B217A48001C179C /* test */,
 				788B8DD1166389A20060CDA8 /* Frameworks */,
@@ -430,6 +446,7 @@
 				788B8DCB166389A20060CDA8 /* Frameworks */,
 				788B8DCC166389A20060CDA8 /* Resources */,
 				BA73E5B17EB1DD3F2FC7A96F /* Copy Pods Resources */,
+				7780D3FE1B72246D006F0F15 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -531,6 +548,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		7780D3FE1B72246D006F0F15 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 1e5397bd220741188c999fab867139fcad8c6931 0274438424aa48007cdcd71408e9a64caa05c245d0e3f2eed676310139590cea";
 		};
 		BA73E5B17EB1DD3F2FC7A96F /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -767,10 +797,18 @@
 			baseConfigurationReference = 1D457FF5D06C8192A6D40CB0 /* Pods-use-bdd.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "use-bdd/use-bdd-Prefix.pch";
 				INFOPLIST_FILE = "use-bdd/use-bdd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -782,10 +820,18 @@
 			baseConfigurationReference = B2866077FDE61D3DB32C1131 /* Pods-use-bdd.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "use-bdd/use-bdd-Prefix.pch";
 				INFOPLIST_FILE = "use-bdd/use-bdd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

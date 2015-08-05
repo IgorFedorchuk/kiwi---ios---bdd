@@ -8,6 +8,8 @@
 
 #import "IFAppDelegate.h"
 #import "IFViewController.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @interface IFAppDelegate()
 
@@ -17,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Fabric with:@[CrashlyticsKit]];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     IFViewController *viewController = [[IFViewController alloc] initWithNibName:@"IFViewController_iPhone" bundle:nil];

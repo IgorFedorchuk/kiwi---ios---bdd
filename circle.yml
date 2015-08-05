@@ -23,8 +23,8 @@ test:
       PROVISIONING_PROFILE=
       -destination 'platform=iOS Simulator,name=iPhone 6,OS=latest'
       -sdk iphonesimulator
-      -workspace use-bdd.xcworkspace
-      -scheme "use-bdd"
+      -workspace $XCODE_WORKSPACE
+      -scheme $XCODE_SCHEME
       build analyze build-tests run-tests 
 deployment:
   crashlytics:

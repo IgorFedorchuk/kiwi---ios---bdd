@@ -11,6 +11,7 @@ machine:
     DEVELOPER_NAME: 'iPhone Distribution'
     APPNAME: use-bdd
     PROFILE_UUID: dist
+    MAIL_LIST: fedorchukjob@gmail.com,fedorchuk_job@mail.ru
 test:
   override:
     - xctool

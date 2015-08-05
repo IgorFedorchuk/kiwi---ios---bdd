@@ -27,6 +27,6 @@ echo "********************"
 
 echo "$APP_DIR/$APPNAME.ipa";
 
-./Crashlytics.framework/submit "$CRASHLYTICS_API" "$CRASHLYTICS_SECRET" -ipaPath "$APP_DIR/$APPNAME.ipa" -emails fedorchukjob@gmail.com -notifications YES
+./Crashlytics.framework/submit "$CRASHLYTICS_API" "$CRASHLYTICS_SECRET" -ipaPath "$APP_DIR/$APPNAME.ipa" -emails "$MAIL_LIST" -notifications YES
 
 echo "*    Finish     *"

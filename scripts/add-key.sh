@@ -10,4 +10,4 @@ security list-keychain -s ~/Library/Keychains/ios-build.keychain
 security unlock-keychain -p $KEYCHAIN_PASSWORD ~/Library/Keychains/ios-build.keychain
 
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-cp ./scripts/profile/* ~/Library/MobileDevice/Provisioning\ Profiles/
+cp ./scripts/dist.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/

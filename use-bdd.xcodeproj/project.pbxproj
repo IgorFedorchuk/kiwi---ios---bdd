@@ -766,6 +766,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1D457FF5D06C8192A6D40CB0 /* Pods-use-bdd.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "use-bdd/use-bdd-Prefix.pch";
 				INFOPLIST_FILE = "use-bdd/use-bdd-Info.plist";
@@ -780,6 +781,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B2866077FDE61D3DB32C1131 /* Pods-use-bdd.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "use-bdd/use-bdd-Prefix.pch";
 				INFOPLIST_FILE = "use-bdd/use-bdd-Info.plist";

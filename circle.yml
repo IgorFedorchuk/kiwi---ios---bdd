@@ -1,0 +1,34 @@
+#
+# IOS Build configuration for Circle CI
+#
+
+machine:
+  xcode:
+    version: "6.3.1"
+  environment:
+    XCODE_SCHEME: use-bdd
+    XCODE_WORKSPACE: use-bdd.xcworkspace
+    DEVELOPER_NAME: 'iPhone Distribution'
+    APPNAME: use-bdd
+    PROFILE_UUID: dist
+test:
+  override:
+    - xctool
+      -reporter pretty
+      -reporter junit:$CIRCLE_TEST_REPORTS/xcode/results.xml
+      -reporter plain:$CIRCLE_ARTIFACTS/xctool.log
+      CODE_SIGNING_REQUIRED=NO
+      CODE_SIGN_IDENTITY=
+      PROVISIONING_PROFILE=
+      -destination 'platform=iOS Simulator,name=iPhone 6,OS=latest'
+      -sdk iphonesimulator
+      -workspace use-bdd.xcworkspace
+      -scheme "use-bdd"
+      build analyze build-tests run-tests 
+deployment:
+  crashlytics:
+    branch: [master, dev]
+    commands:
+      - ./scripts/add-key.sh
+      - ./scripts/crashlytics.sh
+      - ./scripts/remove-key.sh

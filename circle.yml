@@ -15,7 +15,7 @@ machine:
 test:
     override:
         - set -o pipefail &&
-        xcodebuild
+        xcodebuild:
             CODE_SIGNING_REQUIRED=NO
             CODE_SIGN_IDENTITY=
             PROVISIONING_PROFILE=

@@ -13,19 +13,19 @@ machine:
     PROFILE_UUID: dist
     MAIL_LIST: fedorchukjob@gmail.com,fedorchuk_job@mail.ru
 test:
-  override:
-    - xctool
-      -reporter pretty
-      -reporter junit:$CIRCLE_TEST_REPORTS/xcode/results.xml
-      -reporter plain:$CIRCLE_ARTIFACTS/xctool.log
-      CODE_SIGNING_REQUIRED=NO
-      CODE_SIGN_IDENTITY=
-      PROVISIONING_PROFILE=
-      -destination 'platform=iOS Simulator,name=iPhone 6,OS=latest'
-      -sdk iphonesimulator
-      -workspace $XCODE_WORKSPACE
-      -scheme $XCODE_SCHEME
-      build analyze build-tests run-tests 
+override:
+- set -o pipefail &&
+xcodebuild
+CODE_SIGNING_REQUIRED=NO
+CODE_SIGN_IDENTITY=
+PROVISIONING_PROFILE=
+-sdk iphonesimulator
+-destination 'platform=iOS Simulator,OS=9.0,name=iPhone 6'
+-workspace $XCODE_WORKSPACE
+-scheme $XCODE_SCHEME
+clean build test |
+tee $CIRCLE_ARTIFACTS/xcode_raw.log |
+xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml
 deployment:
   crashlytics:
     branch: [master, dev]

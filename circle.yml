@@ -14,7 +14,7 @@ machine:
     MAIL_LIST: fedorchukjob@gmail.com,fedorchuk_job@mail.ru
 test:
 override:
-- set -o pipefail && xcodebuild
+- xcodebuild
 CODE_SIGNING_REQUIRED=NO
 CODE_SIGN_IDENTITY=
 PROVISIONING_PROFILE=

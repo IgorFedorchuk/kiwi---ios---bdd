@@ -12,20 +12,20 @@ machine:
     APPNAME: use-bdd
     PROFILE_UUID: dist
     MAIL_LIST: fedorchukjob@gmail.com,fedorchuk_job@mail.ru
-  test:
-    override:
-    - set -o pipefail &&
-    xcodebuild
-CODE_SIGNING_REQUIRED=NO
-CODE_SIGN_IDENTITY=
-PROVISIONING_PROFILE=
-- sdk iphonesimulator
-- destination 'platform=iOS Simulator,OS=9.0,name=iPhone 6'
-- workspace use-bdd.xcworkspace
-- scheme "use-bdd"
-clean build test |
-tee $CIRCLE_ARTIFACTS/xcode_raw.log |
-xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml
+test:
+  override:
+   - set -o pipefail &&
+   xcodebuild
+   CODE_SIGNING_REQUIRED=NO
+   CODE_SIGN_IDENTITY=
+   PROVISIONING_PROFILE=
+   -sdk iphonesimulator
+   -destination 'platform=iOS Simulator,OS=9.0,name=iPhone 6'
+   -workspace use-bdd.xcworkspace
+   -scheme "use-bdd"
+   clean build test |
+   tee $CIRCLE_ARTIFACTS/xcode_raw.log |
+   xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml
 deployment:
   crashlytics:
     branch: [master, dev]

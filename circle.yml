@@ -15,6 +15,7 @@ machine:
 dependencies:
   override:
     - brew install git-lfs
+    - ssh git@github.com git-lfs-authenticate IgorFedorchuk/kiwi---ios---bdd.git download
 test:
   override:
    - set -o pipefail &&

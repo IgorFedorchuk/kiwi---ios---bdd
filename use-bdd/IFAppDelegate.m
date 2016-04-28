@@ -10,6 +10,7 @@
 #import "IFViewController.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface IFAppDelegate()
 
@@ -28,6 +29,9 @@
 
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
+    
+    [GMSServices provideAPIKey:@""];
+
     return YES;
 }
 

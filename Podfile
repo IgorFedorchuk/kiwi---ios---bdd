@@ -7,13 +7,7 @@ inhibit_all_warnings!
 target 'use-bdd' do
 
 pod 'AFNetworking'
-
-end
-
-target 'use-bddTests' do
-
-pod 'AFNetworking'
-pod 'Kiwi'
+pod 'GoogleMaps'
 
 end
 
@@ -21,5 +15,6 @@ target 'test' do
     
     pod 'AFNetworking'
     pod 'Kiwi'
-    
+    pod 'GoogleMaps'
+
 end
